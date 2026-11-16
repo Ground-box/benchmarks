@@ -1,0 +1,59 @@
+name: react-dev
+run-name: "react-dev | ${{ inputs.runner }} | ${{ inputs.tag }}"
+
+# One job, the same steps on every runner. The harness picks the runner label
+# and the branch; Actions caches are scoped to the branch, so a new branch is a
+# cold cache. See README.md for the method.
+
+on:
+  workflow_dispatch:
+    inputs:
+      runner:
+        description: Runner label to run on
+        required: true
+        default: ubuntu-latest
+      tag:
+        description: Free text the harness uses to find this run
+        required: false
+        default: manual
+
+permissions:
+  contents: read
+
+env:
+  PROJECT_REPO: reactjs/react.dev
+  PROJECT_REF: 46a54e0592729712b7640308b53268e84fdc7c9f
+
+jobs:
+  bench:
+    name: bench
+    runs-on: ${{ inputs.runner }}
+    timeout-minutes: 30
+    steps:
+      - name: Runner info
+        run: |
+          echo "bench-info nproc=$(nproc)"
+          echo "bench-info mem_kb=$(grep MemTotal /proc/meminfo | tr -s ' ' | cut -d' ' -f2)"
+          echo "bench-info cpu=$(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2 | xargs)"
+          echo "bench-info kernel=$(uname -r)"
+      - name: Checkout project
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ env.PROJECT_REPO }}
+          ref: ${{ env.PROJECT_REF }}
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.x
+          cache: yarn
+          cache-dependency-path: yarn.lock
+      - name: Next.js build cache
+        uses: actions/cache@v6
+        with:
+          path: .next/cache
+          key: nextjs-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+      - name: Install
+        run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn build

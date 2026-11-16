@@ -1,0 +1,27 @@
+{
+  "cold_runs": 3,
+  "warm_runs": 5,
+  "runners": [
+    {
+      "id": "github-2vcpu",
+      "label": "ubuntu-latest",
+      "provider": "GitHub-hosted",
+      "billed_minutes": true
+    },
+    {
+      "id": "groundbox-2vcpu",
+      "label": "groundbox-2vcpu",
+      "provider": "Groundbox",
+      "billed_minutes": false
+    },
+    {
+      "id": "groundbox-4vcpu",
+      "label": "groundbox-4vcpu",
+      "provider": "Groundbox",
+      "billed_minutes": false
+    }
+  ],
+  "pairs": [
+    { "baseline": "github-2vcpu", "candidate": "groundbox-2vcpu" }
+  ]
+}

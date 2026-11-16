@@ -1,0 +1,59 @@
+name: excalidraw
+run-name: "excalidraw | ${{ inputs.runner }} | ${{ inputs.tag }}"
+
+# One job, the same steps on every runner. The harness picks the runner label
+# and the branch; Actions caches are scoped to the branch, so a new branch is a
+# cold cache. See README.md for the method.
+
+on:
+  workflow_dispatch:
+    inputs:
+      runner:
+        description: Runner label to run on
+        required: true
+        default: ubuntu-latest
+      tag:
+        description: Free text the harness uses to find this run
+        required: false
+        default: manual
+
+permissions:
+  contents: read
+
+env:
+  PROJECT_REPO: excalidraw/excalidraw
+  PROJECT_REF: c0a0ca348faa273c768de839a22df113f997c095
+
+jobs:
+  bench:
+    name: bench
+    runs-on: ${{ inputs.runner }}
+    timeout-minutes: 30
+    steps:
+      - name: Runner info
+        run: |
+          echo "bench-info nproc=$(nproc)"
+          echo "bench-info mem_kb=$(grep MemTotal /proc/meminfo | tr -s ' ' | cut -d' ' -f2)"
+          echo "bench-info cpu=$(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2 | xargs)"
+          echo "bench-info kernel=$(uname -r)"
+      - name: Checkout project
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ env.PROJECT_REPO }}
+          ref: ${{ env.PROJECT_REF }}
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 20.x
+          cache: yarn
+      - name: Install
+        run: yarn install --frozen-lockfile
+      - name: Format check
+        run: yarn test:other
+      - name: Lint
+        run: yarn test:code
+      - name: Typecheck
+        run: yarn test:typecheck
+      - name: Tests
+        run: yarn test:app --watch=false

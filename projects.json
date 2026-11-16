@@ -1,0 +1,102 @@
+[
+  {
+    "id": "vue-core",
+    "name": "Vue core",
+    "repo": "vuejs/core",
+    "commit": "cbd95955a5362b44060908f6e28ad447c3031b8a",
+    "license": "MIT",
+    "shape": "TypeScript monorepo (pnpm): install, build every package, unit tests",
+    "workflow": "vue-core.yml",
+    "cache": "actions/setup-node, cache: pnpm"
+  },
+  {
+    "id": "react-dev",
+    "name": "react.dev",
+    "repo": "reactjs/react.dev",
+    "commit": "46a54e0592729712b7640308b53268e84fdc7c9f",
+    "license": "CC-BY-4.0",
+    "shape": "Next.js site: install and production build",
+    "workflow": "react-dev.yml",
+    "cache": "actions/setup-node, cache: yarn; actions/cache for .next/cache"
+  },
+  {
+    "id": "pytest",
+    "name": "pytest",
+    "repo": "pytest-dev/pytest",
+    "commit": "50234b4e670064c42a4c29cb6258115a2079ba4c",
+    "license": "MIT",
+    "shape": "Python: pip install, its own test suite under pytest-xdist",
+    "workflow": "pytest.yml",
+    "cache": "actions/setup-python, cache: pip"
+  },
+  {
+    "id": "ripgrep",
+    "name": "ripgrep",
+    "repo": "BurntSushi/ripgrep",
+    "commit": "178cc027e283fd965cb72d0a7395b219eada170c",
+    "license": "Unlicense",
+    "shape": "Rust: release build, then the workspace tests",
+    "workflow": "ripgrep.yml",
+    "cache": "Swatinem/rust-cache"
+  },
+  {
+    "id": "gh-cli",
+    "name": "GitHub CLI",
+    "repo": "cli/cli",
+    "commit": "0536d5e5288458c696ccbeac0e68d87128300069",
+    "license": "MIT",
+    "shape": "Go: module download, unit tests, build",
+    "workflow": "gh-cli.yml",
+    "cache": "actions/setup-go (its built-in cache)"
+  },
+  {
+    "id": "spring-petclinic",
+    "name": "Spring PetClinic",
+    "repo": "spring-projects/spring-petclinic",
+    "commit": "500158f732419217507c7656904b8e6aa1bcc0d6",
+    "license": "Apache-2.0",
+    "shape": "Java 17 and Maven: ./mvnw verify, with tests that start database containers",
+    "workflow": "spring-petclinic.yml",
+    "cache": "actions/setup-java, cache: maven"
+  },
+  {
+    "id": "voting-app-docker",
+    "name": "Example Voting App",
+    "repo": "dockersamples/example-voting-app",
+    "commit": "63e9150ca17af4ed05880d4245e486481f73fcb4",
+    "license": "Apache-2.0",
+    "shape": "Docker: three image builds (Python, Node, .NET multi-stage)",
+    "workflow": "voting-app-docker.yml",
+    "cache": "docker/build-push-action, cache-from and cache-to type=gha"
+  },
+  {
+    "id": "fmt",
+    "name": "{fmt}",
+    "repo": "fmtlib/fmt",
+    "commit": "14ac0d5a9d40aef14f50954069c1e10971abb0b2",
+    "license": "MIT",
+    "shape": "C++: CMake configure, build, ctest",
+    "workflow": "fmt.yml",
+    "cache": "hendrikmuhs/ccache-action"
+  },
+  {
+    "id": "jekyll",
+    "name": "Jekyll",
+    "repo": "jekyll/jekyll",
+    "commit": "97c3bdc822df9d5bea4c269b29a28de5a5e29d70",
+    "license": "MIT",
+    "shape": "Ruby: bundle install, Minitest suite, generate and build a site",
+    "workflow": "jekyll.yml",
+    "cache": "ruby/setup-ruby, bundler-cache: true"
+  },
+  {
+    "id": "excalidraw",
+    "name": "Excalidraw",
+    "repo": "excalidraw/excalidraw",
+    "commit": "c0a0ca348faa273c768de839a22df113f997c095",
+    "license": "MIT",
+    "shape": "Web app (yarn): install, format check, lint, typecheck, tests",
+    "workflow": "excalidraw.yml",
+    "cache": "actions/setup-node, cache: yarn"
+  }
+]

@@ -1,0 +1,52 @@
+name: spring-petclinic
+run-name: "spring-petclinic | ${{ inputs.runner }} | ${{ inputs.tag }}"
+
+# One job, the same steps on every runner. The harness picks the runner label
+# and the branch; Actions caches are scoped to the branch, so a new branch is a
+# cold cache. See README.md for the method.
+
+on:
+  workflow_dispatch:
+    inputs:
+      runner:
+        description: Runner label to run on
+        required: true
+        default: ubuntu-latest
+      tag:
+        description: Free text the harness uses to find this run
+        required: false
+        default: manual
+
+permissions:
+  contents: read
+
+env:
+  PROJECT_REPO: spring-projects/spring-petclinic
+  PROJECT_REF: 500158f732419217507c7656904b8e6aa1bcc0d6
+
+jobs:
+  bench:
+    name: bench
+    runs-on: ${{ inputs.runner }}
+    timeout-minutes: 30
+    steps:
+      - name: Runner info
+        run: |
+          echo "bench-info nproc=$(nproc)"
+          echo "bench-info mem_kb=$(grep MemTotal /proc/meminfo | tr -s ' ' | cut -d' ' -f2)"
+          echo "bench-info cpu=$(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2 | xargs)"
+          echo "bench-info kernel=$(uname -r)"
+      - name: Checkout project
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ env.PROJECT_REPO }}
+          ref: ${{ env.PROJECT_REF }}
+          persist-credentials: false
+      - name: Setup Java
+        uses: actions/setup-java@v6
+        with:
+          java-version: "17"
+          distribution: temurin
+          cache: maven
+      - name: Build and test
+        run: ./mvnw -B verify
