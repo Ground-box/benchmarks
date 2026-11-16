@@ -95,7 +95,7 @@ async function dropBranch(branch) {
 
 // ---------------------------------------------------------------- one run
 
-const CACHE_HIT = /cache restored|cache hit|restored from cache|restored cache|cache up-to-date|importing cache manifest/i;
+const CACHE_HIT = /cache restored|cache hit|restored from cache|restored cache|cache up-to-date/i;
 const CACHE_MISS = /cache not found|no cache found|cache miss|cache is not found|not found in cache|no cache is found/i;
 
 function readLog(text) {
