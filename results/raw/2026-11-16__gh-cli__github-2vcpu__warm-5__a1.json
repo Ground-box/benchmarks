@@ -1,0 +1,201 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "gh-cli",
+  "project_repo": "cli/cli",
+  "project_commit": "0536d5e5288458c696ccbeac0e68d87128300069",
+  "runner_id": "github-2vcpu",
+  "runner_label": "ubuntu-latest",
+  "provider": "GitHub-hosted",
+  "kind": "warm",
+  "n": 5,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/gh-cli/github-2vcpu/warm-a1",
+  "tag": "2026-11-16/gh-cli/github-2vcpu/warm-5/a1/2c9nlq",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-17T02:20:51.760Z",
+  "status": "ok",
+  "run": {
+    "id": 44002301872,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/44002301872",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/gh-cli/github-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-17T02:20:53Z",
+    "run_started_at": "2026-11-17T02:20:53Z",
+    "updated_at": "2026-11-17T02:23:04Z"
+  },
+  "job": {
+    "id": 133769096170,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-17T02:20:55Z",
+    "started_at": "2026-11-17T02:20:56Z",
+    "completed_at": "2026-11-17T02:23:04Z",
+    "runner_name": "GitHub Actions 1000000327",
+    "runner_group_name": "GitHub Actions",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-17T02:20:57Z",
+        "completed_at": "2026-11-17T02:20:58Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-17T02:20:58Z",
+        "completed_at": "2026-11-17T02:20:58Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-17T02:20:58Z",
+        "completed_at": "2026-11-17T02:21:00Z"
+      },
+      {
+        "name": "Setup Go",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-17T02:21:00Z",
+        "completed_at": "2026-11-17T02:21:30Z"
+      },
+      {
+        "name": "Download modules",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-17T02:21:30Z",
+        "completed_at": "2026-11-17T02:21:30Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-17T02:21:30Z",
+        "completed_at": "2026-11-17T02:22:58Z"
+      },
+      {
+        "name": "Build",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-17T02:22:58Z",
+        "completed_at": "2026-11-17T02:23:00Z"
+      },
+      {
+        "name": "Post Setup Go",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-17T02:23:00Z",
+        "completed_at": "2026-11-17T02:23:00Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14,
+        "started_at": "2026-11-17T02:23:00Z",
+        "completed_at": "2026-11-17T02:23:00Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-17T02:23:00Z",
+        "completed_at": "2026-11-17T02:23:00Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 1,
+    "to_first_step_s": 2,
+    "job_s": 128,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 2
+      },
+      {
+        "name": "Setup Go",
+        "conclusion": "success",
+        "seconds": 30
+      },
+      {
+        "name": "Download modules",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 88
+      },
+      {
+        "name": "Build",
+        "conclusion": "success",
+        "seconds": 2
+      },
+      {
+        "name": "Post Setup Go",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "kernel": "7.0.0-1019-azure",
+    "mem_gb": 7.7
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: setup-go-Linux-x64-ubuntu26-go-1.27.4-a26dc37a0783fa41fffa53be5fe02bde45c2b93f90db1a5bdd92eabe864dfe78",
+      "Cache restored successfully",
+      "Cache restored from key: setup-go-Linux-x64-ubuntu26-go-1.27.4-a26dc37a0783fa41fffa53be5fe02bde45c2b93f90db1a5bdd92eabe864dfe78",
+      "Cache hit occurred on the primary key setup-go-Linux-x64-ubuntu26-go-1.27.4-a26dc37a0783fa41fffa53be5fe02bde45c2b93f90db1a5bdd92eabe864dfe78, not saving cache."
+    ]
+  }
+}

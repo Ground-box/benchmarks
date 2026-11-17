@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "jekyll",
+  "project_repo": "jekyll/jekyll",
+  "project_commit": "97c3bdc822df9d5bea4c269b29a28de5a5e29d70",
+  "runner_id": "github-2vcpu",
+  "runner_label": "ubuntu-latest",
+  "provider": "GitHub-hosted",
+  "kind": "warm",
+  "n": 5,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/jekyll/github-2vcpu/warm-a1",
+  "tag": "2026-11-16/jekyll/github-2vcpu/warm-5/a1/sawnhe",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-17T02:27:05.195Z",
+  "status": "ok",
+  "run": {
+    "id": 44003071610,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/44003071610",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/jekyll/github-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-17T02:27:06Z",
+    "run_started_at": "2026-11-17T02:27:06Z",
+    "updated_at": "2026-11-17T02:28:36Z"
+  },
+  "job": {
+    "id": 133771669332,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-17T02:27:08Z",
+    "started_at": "2026-11-17T02:27:09Z",
+    "completed_at": "2026-11-17T02:28:35Z",
+    "runner_name": "GitHub Actions 1000000332",
+    "runner_group_name": "GitHub Actions",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-17T02:27:10Z",
+        "completed_at": "2026-11-17T02:27:11Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-17T02:27:11Z",
+        "completed_at": "2026-11-17T02:27:11Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-17T02:27:11Z",
+        "completed_at": "2026-11-17T02:27:12Z"
+      },
+      {
+        "name": "Setup Ruby",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-17T02:27:12Z",
+        "completed_at": "2026-11-17T02:27:20Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-17T02:27:20Z",
+        "completed_at": "2026-11-17T02:28:11Z"
+      },
+      {
+        "name": "Generate and build a new site",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-17T02:28:11Z",
+        "completed_at": "2026-11-17T02:28:34Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 12,
+        "started_at": "2026-11-17T02:28:34Z",
+        "completed_at": "2026-11-17T02:28:34Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-17T02:28:34Z",
+        "completed_at": "2026-11-17T02:28:34Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 1,
+    "to_first_step_s": 2,
+    "job_s": 86,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup Ruby",
+        "conclusion": "success",
+        "seconds": 8
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 51
+      },
+      {
+        "name": "Generate and build a new site",
+        "conclusion": "success",
+        "seconds": 23
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC 9V45 96-Core Processor",
+    "kernel": "7.0.0-1019-azure",
+    "mem_gb": 7.7
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: setup-ruby-bundler-cache-v6-ubuntu-26.04-x64-ruby-3.4.12-wd-/home/runner/work/benchmarks/benchmarks-with--without--only--Gemfile.lock-287f1610add3fba62825537c286b8f4a8097d6deaaac01cd7bdcecccb7aaf7e9",
+      "Cache restored successfully"
+    ]
+  }
+}

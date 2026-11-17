@@ -1,0 +1,250 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "react-dev",
+  "project_repo": "reactjs/react.dev",
+  "project_commit": "46a54e0592729712b7640308b53268e84fdc7c9f",
+  "runner_id": "github-2vcpu",
+  "runner_label": "ubuntu-latest",
+  "provider": "GitHub-hosted",
+  "kind": "warm",
+  "n": 4,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/react-dev/github-2vcpu/warm-a1",
+  "tag": "2026-11-16/react-dev/github-2vcpu/warm-4/a1/4j5v7x",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-17T01:44:03.423Z",
+  "status": "ok",
+  "run": {
+    "id": 43997806762,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43997806762",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/react-dev/github-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-17T01:44:05Z",
+    "run_started_at": "2026-11-17T01:44:05Z",
+    "updated_at": "2026-11-17T01:46:56Z"
+  },
+  "job": {
+    "id": 133754098568,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-17T01:44:06Z",
+    "started_at": "2026-11-17T01:44:08Z",
+    "completed_at": "2026-11-17T01:46:56Z",
+    "runner_name": "GitHub Actions 1000000311",
+    "runner_group_name": "GitHub Actions",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-17T01:44:09Z",
+        "completed_at": "2026-11-17T01:44:10Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-17T01:44:10Z",
+        "completed_at": "2026-11-17T01:44:10Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-17T01:44:10Z",
+        "completed_at": "2026-11-17T01:44:12Z"
+      },
+      {
+        "name": "Setup Node",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-17T01:44:12Z",
+        "completed_at": "2026-11-17T01:44:51Z"
+      },
+      {
+        "name": "Next.js build cache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-17T01:44:51Z",
+        "completed_at": "2026-11-17T01:44:54Z"
+      },
+      {
+        "name": "Install",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-17T01:44:54Z",
+        "completed_at": "2026-11-17T01:45:24Z"
+      },
+      {
+        "name": "Build",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-17T01:45:24Z",
+        "completed_at": "2026-11-17T01:46:52Z"
+      },
+      {
+        "name": "Post Next.js build cache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 12,
+        "started_at": "2026-11-17T01:46:52Z",
+        "completed_at": "2026-11-17T01:46:52Z"
+      },
+      {
+        "name": "Post Setup Node",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-17T01:46:52Z",
+        "completed_at": "2026-11-17T01:46:53Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14,
+        "started_at": "2026-11-17T01:46:53Z",
+        "completed_at": "2026-11-17T01:46:53Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-17T01:46:53Z",
+        "completed_at": "2026-11-17T01:46:53Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 2,
+    "to_first_step_s": 3,
+    "job_s": 168,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 2
+      },
+      {
+        "name": "Setup Node",
+        "conclusion": "success",
+        "seconds": 39
+      },
+      {
+        "name": "Next.js build cache",
+        "conclusion": "success",
+        "seconds": 3
+      },
+      {
+        "name": "Install",
+        "conclusion": "success",
+        "seconds": 30
+      },
+      {
+        "name": "Build",
+        "conclusion": "success",
+        "seconds": 88
+      },
+      {
+        "name": "Post Next.js build cache",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Setup Node",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "kernel": "7.0.0-1019-azure",
+    "mem_gb": 7.7
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: node-cache-Linux-x64-yarn-580776be30cab6750e38524f37da4dd51e8814218181dafeab91606086b63adf",
+      "Cache restored successfully",
+      "Cache restored from key: node-cache-Linux-x64-yarn-580776be30cab6750e38524f37da4dd51e8814218181dafeab91606086b63adf",
+      "Cache hit for: nextjs-Linux-580776be30cab6750e38524f37da4dd51e8814218181dafeab91606086b63adf",
+      "Cache restored successfully",
+      "Cache restored from key: nextjs-Linux-580776be30cab6750e38524f37da4dd51e8814218181dafeab91606086b63adf",
+      "Cache miss for MDX for /1 from ./node_modules/.cache/",
+      "Cache miss for MDX for /2 from ./node_modules/.cache/",
+      "Cache miss for MDX for /3 from ./node_modules/.cache/",
+      "Cache miss for MDX for /0 from ./node_modules/.cache/",
+      "Cache miss for MDX for /index from ./node_modules/.cache/",
+      "Cache miss for MDX for /4 from ./node_modules/.cache/",
+      "Cache miss for MDX for /5 from ./node_modules/.cache/",
+      "Cache miss for MDX for /6 from ./node_modules/.cache/",
+      "Cache miss for MDX for /7 from ./node_modules/.cache/",
+      "Cache miss for MDX for /8 from ./node_modules/.cache/",
+      "Cache miss for MDX for /9 from ./node_modules/.cache/",
+      "Cache miss for MDX for /10 from ./node_modules/.cache/",
+      "Cache miss for MDX for /11 from ./node_modules/.cache/",
+      "Cache miss for MDX for /12 from ./node_modules/.cache/",
+      "Cache miss for MDX for /13 from ./node_modules/.cache/",
+      "Cache miss for MDX for /14 from ./node_modules/.cache/",
+      "Cache miss for MDX for /15 from ./node_modules/.cache/",
+      "Cache miss for MDX for /16 from ./node_modules/.cache/",
+      "Cache miss for MDX for /17 from ./node_modules/.cache/",
+      "Cache miss for MDX for /18 from ./node_modules/.cache/",
+      "Cache miss for MDX for /19 from ./node_modules/.cache/",
+      "Cache miss for MDX for /20 from ./node_modules/.cache/",
+      "Cache miss for MDX for /21 from ./node_modules/.cache/",
+      "Cache miss for MDX for /22 from ./node_modules/.cache/",
+      "Cache miss for MDX for /23 from ./node_modules/.cache/",
+      "Cache miss for MDX for /24 from ./node_modules/.cache/",
+      "Cache miss for MDX for /25 from ./node_modules/.cache/",
+      "Cache miss for MDX for /26 from ./node_modules/.cache/",
+      "Cache miss for MDX for /27 from ./node_modules/.cache/",
+      "Cache miss for MDX for /28 from ./node_modules/.cache/",
+      "Cache miss for MDX for /29 from ./node_modules/.cache/",
+      "Cache miss for MDX for /31 from ./node_modules/.cache/",
+      "Cache miss for MDX for /32 from ./node_modules/.cache/",
+      "Cache miss for MDX for /30 from ./node_modules/.cache/"
+    ]
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "pytest",
+  "project_repo": "pytest-dev/pytest",
+  "project_commit": "50234b4e670064c42a4c29cb6258115a2079ba4c",
+  "runner_id": "groundbox-2vcpu",
+  "runner_label": "groundbox-2vcpu",
+  "provider": "Groundbox",
+  "kind": "warm",
+  "n": 3,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/pytest/groundbox-2vcpu/warm-a1",
+  "tag": "2026-11-16/pytest/groundbox-2vcpu/warm-3/a1/7onjs3",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-16T23:47:19.937Z",
+  "status": "ok",
+  "run": {
+    "id": 43982273311,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43982273311",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/pytest/groundbox-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-16T23:47:21Z",
+    "run_started_at": "2026-11-16T23:47:21Z",
+    "updated_at": "2026-11-16T23:48:58Z"
+  },
+  "job": {
+    "id": 133701474356,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-16T23:47:23Z",
+    "started_at": "2026-11-16T23:47:27Z",
+    "completed_at": "2026-11-16T23:48:57Z",
+    "runner_name": "gbx-2vcpu-bxdfx8n7x1",
+    "runner_group_name": "default",
+    "labels": [
+      "groundbox-2vcpu"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-16T23:47:27Z",
+        "completed_at": "2026-11-16T23:47:28Z"
+      },
+      {
+        "name": "Set up runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-16T23:47:28Z",
+        "completed_at": "2026-11-16T23:47:28Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-16T23:47:28Z",
+        "completed_at": "2026-11-16T23:47:28Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-16T23:47:28Z",
+        "completed_at": "2026-11-16T23:47:31Z"
+      },
+      {
+        "name": "Setup Python",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-16T23:47:31Z",
+        "completed_at": "2026-11-16T23:47:31Z"
+      },
+      {
+        "name": "Install",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-16T23:47:31Z",
+        "completed_at": "2026-11-16T23:47:36Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-16T23:47:36Z",
+        "completed_at": "2026-11-16T23:48:56Z"
+      },
+      {
+        "name": "Post Setup Python",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 12,
+        "started_at": "2026-11-16T23:48:56Z",
+        "completed_at": "2026-11-16T23:48:56Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-16T23:48:56Z",
+        "completed_at": "2026-11-16T23:48:56Z"
+      },
+      {
+        "name": "Complete runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14,
+        "started_at": "2026-11-16T23:48:56Z",
+        "completed_at": "2026-11-16T23:48:56Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-16T23:48:56Z",
+        "completed_at": "2026-11-16T23:48:56Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 4,
+    "to_first_step_s": 4,
+    "job_s": 90,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Set up runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 3
+      },
+      {
+        "name": "Setup Python",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Install",
+        "conclusion": "success",
+        "seconds": 5
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 80
+      },
+      {
+        "name": "Post Setup Python",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC",
+    "kernel": "6.18.63",
+    "mem_gb": 7.8
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.18-pip-a5e7721611f4127fa0fa14153d9c6e071d169538594669a2b303bca1a8307ac7",
+      "Cache restored successfully",
+      "Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.13.18-pip-a5e7721611f4127fa0fa14153d9c6e071d169538594669a2b303bca1a8307ac7",
+      "Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.13.18-pip-a5e7721611f4127fa0fa14153d9c6e071d169538594669a2b303bca1a8307ac7, not saving cache."
+    ]
+  }
+}

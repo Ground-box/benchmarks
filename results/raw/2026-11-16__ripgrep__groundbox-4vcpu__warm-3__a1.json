@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "ripgrep",
+  "project_repo": "BurntSushi/ripgrep",
+  "project_commit": "178cc027e283fd965cb72d0a7395b219eada170c",
+  "runner_id": "groundbox-4vcpu",
+  "runner_label": "groundbox-4vcpu",
+  "provider": "Groundbox",
+  "kind": "warm",
+  "n": 3,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/ripgrep/groundbox-4vcpu/warm-a1",
+  "tag": "2026-11-16/ripgrep/groundbox-4vcpu/warm-3/a1/sladzl",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-16T23:14:03.147Z",
+  "status": "ok",
+  "run": {
+    "id": 43977474539,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43977474539",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/ripgrep/groundbox-4vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-16T23:14:04Z",
+    "run_started_at": "2026-11-16T23:14:04Z",
+    "updated_at": "2026-11-16T23:14:23Z"
+  },
+  "job": {
+    "id": 133685074425,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-16T23:14:06Z",
+    "started_at": "2026-11-16T23:14:06Z",
+    "completed_at": "2026-11-16T23:14:22Z",
+    "runner_name": "gbx-4vcpu-haybxnjwwu",
+    "runner_group_name": "default",
+    "labels": [
+      "groundbox-4vcpu"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-16T23:14:07Z",
+        "completed_at": "2026-11-16T23:14:07Z"
+      },
+      {
+        "name": "Set up runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-16T23:14:07Z",
+        "completed_at": "2026-11-16T23:14:07Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-16T23:14:07Z",
+        "completed_at": "2026-11-16T23:14:07Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-16T23:14:07Z",
+        "completed_at": "2026-11-16T23:14:08Z"
+      },
+      {
+        "name": "Setup Rust",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-16T23:14:08Z",
+        "completed_at": "2026-11-16T23:14:08Z"
+      },
+      {
+        "name": "Cargo cache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-16T23:14:08Z",
+        "completed_at": "2026-11-16T23:14:08Z"
+      },
+      {
+        "name": "Build (release)",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-16T23:14:08Z",
+        "completed_at": "2026-11-16T23:14:14Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8,
+        "started_at": "2026-11-16T23:14:14Z",
+        "completed_at": "2026-11-16T23:14:20Z"
+      },
+      {
+        "name": "Post Cargo cache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14,
+        "started_at": "2026-11-16T23:14:20Z",
+        "completed_at": "2026-11-16T23:14:20Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-16T23:14:20Z",
+        "completed_at": "2026-11-16T23:14:20Z"
+      },
+      {
+        "name": "Complete runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 16,
+        "started_at": "2026-11-16T23:14:20Z",
+        "completed_at": "2026-11-16T23:14:20Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 17,
+        "started_at": "2026-11-16T23:14:20Z",
+        "completed_at": "2026-11-16T23:14:20Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 0,
+    "to_first_step_s": 1,
+    "job_s": 16,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Set up runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup Rust",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Cargo cache",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Build (release)",
+        "conclusion": "success",
+        "seconds": 6
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 6
+      },
+      {
+        "name": "Post Cargo cache",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 4,
+    "cpu": "AMD EPYC",
+    "kernel": "6.18.63",
+    "mem_gb": 15.6
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: v0-rust-bench-Linux-x64-8272a5e9-f1630c24",
+      "Cache restored successfully",
+      "Restored from cache key \"v0-rust-bench-Linux-x64-8272a5e9-f1630c24\" full match: true.",
+      "Cache up-to-date."
+    ]
+  }
+}

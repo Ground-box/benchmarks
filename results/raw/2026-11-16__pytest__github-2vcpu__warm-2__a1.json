@@ -1,0 +1,188 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "pytest",
+  "project_repo": "pytest-dev/pytest",
+  "project_commit": "50234b4e670064c42a4c29cb6258115a2079ba4c",
+  "runner_id": "github-2vcpu",
+  "runner_label": "ubuntu-latest",
+  "provider": "GitHub-hosted",
+  "kind": "warm",
+  "n": 2,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/pytest/github-2vcpu/warm-a1",
+  "tag": "2026-11-16/pytest/github-2vcpu/warm-2/a1/wgs43a",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-17T00:42:51.412Z",
+  "status": "ok",
+  "run": {
+    "id": 43989840426,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43989840426",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/pytest/github-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-17T00:42:52Z",
+    "run_started_at": "2026-11-17T00:42:52Z",
+    "updated_at": "2026-11-17T00:46:28Z"
+  },
+  "job": {
+    "id": 133727321563,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-17T00:42:54Z",
+    "started_at": "2026-11-17T00:42:55Z",
+    "completed_at": "2026-11-17T00:46:27Z",
+    "runner_name": "GitHub Actions 1000000287",
+    "runner_group_name": "GitHub Actions",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-17T00:42:56Z",
+        "completed_at": "2026-11-17T00:42:57Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-17T00:42:57Z",
+        "completed_at": "2026-11-17T00:42:57Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-17T00:42:57Z",
+        "completed_at": "2026-11-17T00:43:04Z"
+      },
+      {
+        "name": "Setup Python",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-17T00:43:04Z",
+        "completed_at": "2026-11-17T00:43:05Z"
+      },
+      {
+        "name": "Install",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-17T00:43:05Z",
+        "completed_at": "2026-11-17T00:43:16Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-17T00:43:16Z",
+        "completed_at": "2026-11-17T00:46:26Z"
+      },
+      {
+        "name": "Post Setup Python",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 11,
+        "started_at": "2026-11-17T00:46:26Z",
+        "completed_at": "2026-11-17T00:46:26Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 12,
+        "started_at": "2026-11-17T00:46:26Z",
+        "completed_at": "2026-11-17T00:46:26Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-17T00:46:26Z",
+        "completed_at": "2026-11-17T00:46:26Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 1,
+    "to_first_step_s": 2,
+    "job_s": 212,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 7
+      },
+      {
+        "name": "Setup Python",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Install",
+        "conclusion": "success",
+        "seconds": 11
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 190
+      },
+      {
+        "name": "Post Setup Python",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "kernel": "7.0.0-1019-azure",
+    "mem_gb": 7.7
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: setup-python-Linux-x64-26.04-Ubuntu-python-3.13.18-pip-a5e7721611f4127fa0fa14153d9c6e071d169538594669a2b303bca1a8307ac7",
+      "Cache restored successfully",
+      "Cache restored from key: setup-python-Linux-x64-26.04-Ubuntu-python-3.13.18-pip-a5e7721611f4127fa0fa14153d9c6e071d169538594669a2b303bca1a8307ac7",
+      "Cache hit occurred on the primary key setup-python-Linux-x64-26.04-Ubuntu-python-3.13.18-pip-a5e7721611f4127fa0fa14153d9c6e071d169538594669a2b303bca1a8307ac7, not saving cache."
+    ]
+  }
+}

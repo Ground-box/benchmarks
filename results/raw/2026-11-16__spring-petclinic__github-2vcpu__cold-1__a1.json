@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "spring-petclinic",
+  "project_repo": "spring-projects/spring-petclinic",
+  "project_commit": "500158f732419217507c7656904b8e6aa1bcc0d6",
+  "runner_id": "github-2vcpu",
+  "runner_label": "ubuntu-latest",
+  "provider": "GitHub-hosted",
+  "kind": "cold",
+  "n": 1,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/spring-petclinic/github-2vcpu/cold-1-a1",
+  "tag": "2026-11-16/spring-petclinic/github-2vcpu/cold-1/a1/p4w5yg",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-16T22:27:18.121Z",
+  "status": "ok",
+  "run": {
+    "id": 43970213166,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43970213166",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/spring-petclinic/github-2vcpu/cold-1-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-16T22:27:20Z",
+    "run_started_at": "2026-11-16T22:27:20Z",
+    "updated_at": "2026-11-16T22:29:42Z"
+  },
+  "job": {
+    "id": 133660097510,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-16T22:27:22Z",
+    "started_at": "2026-11-16T22:27:24Z",
+    "completed_at": "2026-11-16T22:29:41Z",
+    "runner_name": "GitHub Actions 1000000227",
+    "runner_group_name": "GitHub Actions",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-16T22:27:24Z",
+        "completed_at": "2026-11-16T22:27:26Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-16T22:27:26Z",
+        "completed_at": "2026-11-16T22:27:26Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-16T22:27:26Z",
+        "completed_at": "2026-11-16T22:27:27Z"
+      },
+      {
+        "name": "Setup Java",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-16T22:27:27Z",
+        "completed_at": "2026-11-16T22:27:27Z"
+      },
+      {
+        "name": "Build and test",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-16T22:27:27Z",
+        "completed_at": "2026-11-16T22:29:35Z"
+      },
+      {
+        "name": "Post Setup Java",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 9,
+        "started_at": "2026-11-16T22:29:35Z",
+        "completed_at": "2026-11-16T22:29:39Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 10,
+        "started_at": "2026-11-16T22:29:39Z",
+        "completed_at": "2026-11-16T22:29:39Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 11,
+        "started_at": "2026-11-16T22:29:40Z",
+        "completed_at": "2026-11-16T22:29:40Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 2,
+    "to_first_step_s": 2,
+    "job_s": 137,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 2
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup Java",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Build and test",
+        "conclusion": "success",
+        "seconds": 128
+      },
+      {
+        "name": "Post Setup Java",
+        "conclusion": "success",
+        "seconds": 4
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "kernel": "7.0.0-1019-azure",
+    "mem_gb": 7.7
+  },
+  "cache": {
+    "restored": false,
+    "docker_cached_layers": 0,
+    "lines": [
+      "maven cache is not found",
+      "maven-wrapper cache is not found"
+    ]
+  }
+}

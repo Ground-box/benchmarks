@@ -1,0 +1,224 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "ripgrep",
+  "project_repo": "BurntSushi/ripgrep",
+  "project_commit": "178cc027e283fd965cb72d0a7395b219eada170c",
+  "runner_id": "groundbox-2vcpu",
+  "runner_label": "groundbox-2vcpu",
+  "provider": "Groundbox",
+  "kind": "cold",
+  "n": 2,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/ripgrep/groundbox-2vcpu/cold-2-a1",
+  "tag": "2026-11-16/ripgrep/groundbox-2vcpu/cold-2/a1/19xkm3",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-16T22:33:01.166Z",
+  "status": "ok",
+  "run": {
+    "id": 43971125186,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43971125186",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/ripgrep/groundbox-2vcpu/cold-2-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-16T22:33:03Z",
+    "run_started_at": "2026-11-16T22:33:03Z",
+    "updated_at": "2026-11-16T22:33:57Z"
+  },
+  "job": {
+    "id": 133663247561,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-16T22:33:05Z",
+    "started_at": "2026-11-16T22:33:11Z",
+    "completed_at": "2026-11-16T22:33:56Z",
+    "runner_name": "gbx-2vcpu-kwyt4fjw9f",
+    "runner_group_name": "default",
+    "labels": [
+      "groundbox-2vcpu"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-16T22:33:12Z",
+        "completed_at": "2026-11-16T22:33:12Z"
+      },
+      {
+        "name": "Set up runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-16T22:33:12Z",
+        "completed_at": "2026-11-16T22:33:12Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-16T22:33:12Z",
+        "completed_at": "2026-11-16T22:33:12Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-16T22:33:12Z",
+        "completed_at": "2026-11-16T22:33:13Z"
+      },
+      {
+        "name": "Setup Rust",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-16T22:33:13Z",
+        "completed_at": "2026-11-16T22:33:13Z"
+      },
+      {
+        "name": "Cargo cache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-16T22:33:13Z",
+        "completed_at": "2026-11-16T22:33:13Z"
+      },
+      {
+        "name": "Build (release)",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-16T22:33:13Z",
+        "completed_at": "2026-11-16T22:33:38Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8,
+        "started_at": "2026-11-16T22:33:38Z",
+        "completed_at": "2026-11-16T22:33:54Z"
+      },
+      {
+        "name": "Post Cargo cache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14,
+        "started_at": "2026-11-16T22:33:54Z",
+        "completed_at": "2026-11-16T22:33:55Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-16T22:33:55Z",
+        "completed_at": "2026-11-16T22:33:55Z"
+      },
+      {
+        "name": "Complete runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 16,
+        "started_at": "2026-11-16T22:33:55Z",
+        "completed_at": "2026-11-16T22:33:55Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 17,
+        "started_at": "2026-11-16T22:33:55Z",
+        "completed_at": "2026-11-16T22:33:55Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 6,
+    "to_first_step_s": 7,
+    "job_s": 45,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Set up runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup Rust",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Cargo cache",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Build (release)",
+        "conclusion": "success",
+        "seconds": 25
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 16
+      },
+      {
+        "name": "Post Cargo cache",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC",
+    "kernel": "6.18.63",
+    "mem_gb": 7.8
+  },
+  "cache": {
+    "restored": false,
+    "docker_cached_layers": 0,
+    "lines": [
+      "No cache found."
+    ]
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "pytest",
+  "project_repo": "pytest-dev/pytest",
+  "project_commit": "50234b4e670064c42a4c29cb6258115a2079ba4c",
+  "runner_id": "github-2vcpu",
+  "runner_label": "ubuntu-latest",
+  "provider": "GitHub-hosted",
+  "kind": "cold",
+  "n": 3,
+  "attempt": 1,
+  "primes_warm_cache": true,
+  "branch": "bench/2026-11-16/pytest/github-2vcpu/warm-a1",
+  "tag": "2026-11-16/pytest/github-2vcpu/cold-3/a1/tx3l66",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-16T23:34:58.193Z",
+  "status": "ok",
+  "run": {
+    "id": 43980522603,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43980522603",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/pytest/github-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-16T23:35:00Z",
+    "run_started_at": "2026-11-16T23:35:00Z",
+    "updated_at": "2026-11-16T23:37:41Z"
+  },
+  "job": {
+    "id": 133695496131,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-16T23:35:02Z",
+    "started_at": "2026-11-16T23:35:03Z",
+    "completed_at": "2026-11-16T23:37:40Z",
+    "runner_name": "GitHub Actions 1000000263",
+    "runner_group_name": "GitHub Actions",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-16T23:35:04Z",
+        "completed_at": "2026-11-16T23:35:05Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-16T23:35:05Z",
+        "completed_at": "2026-11-16T23:35:05Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-16T23:35:05Z",
+        "completed_at": "2026-11-16T23:35:10Z"
+      },
+      {
+        "name": "Setup Python",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-16T23:35:10Z",
+        "completed_at": "2026-11-16T23:35:12Z"
+      },
+      {
+        "name": "Install",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-16T23:35:12Z",
+        "completed_at": "2026-11-16T23:35:20Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-16T23:35:20Z",
+        "completed_at": "2026-11-16T23:37:37Z"
+      },
+      {
+        "name": "Post Setup Python",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 11,
+        "started_at": "2026-11-16T23:37:37Z",
+        "completed_at": "2026-11-16T23:37:38Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 12,
+        "started_at": "2026-11-16T23:37:38Z",
+        "completed_at": "2026-11-16T23:37:38Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-16T23:37:38Z",
+        "completed_at": "2026-11-16T23:37:38Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 1,
+    "to_first_step_s": 2,
+    "job_s": 157,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 5
+      },
+      {
+        "name": "Setup Python",
+        "conclusion": "success",
+        "seconds": 2
+      },
+      {
+        "name": "Install",
+        "conclusion": "success",
+        "seconds": 8
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 137
+      },
+      {
+        "name": "Post Setup Python",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC 9V45 96-Core Processor",
+    "kernel": "7.0.0-1019-azure",
+    "mem_gb": 7.7
+  },
+  "cache": {
+    "restored": false,
+    "docker_cached_layers": 0,
+    "lines": [
+      "pip cache is not found"
+    ]
+  }
+}

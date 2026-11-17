@@ -1,0 +1,235 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "voting-app-docker",
+  "project_repo": "dockersamples/example-voting-app",
+  "project_commit": "63e9150ca17af4ed05880d4245e486481f73fcb4",
+  "runner_id": "github-2vcpu",
+  "runner_label": "ubuntu-latest",
+  "provider": "GitHub-hosted",
+  "kind": "warm",
+  "n": 2,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/voting-app-docker/github-2vcpu/warm-a1",
+  "tag": "2026-11-16/voting-app-docker/github-2vcpu/warm-2/a1/u59x3b",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-17T00:52:09.859Z",
+  "status": "ok",
+  "run": {
+    "id": 43991096929,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43991096929",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/voting-app-docker/github-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-17T00:52:11Z",
+    "run_started_at": "2026-11-17T00:52:11Z",
+    "updated_at": "2026-11-17T00:52:42Z"
+  },
+  "job": {
+    "id": 133731567825,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-17T00:52:13Z",
+    "started_at": "2026-11-17T00:52:14Z",
+    "completed_at": "2026-11-17T00:52:42Z",
+    "runner_name": "GitHub Actions 1000000291",
+    "runner_group_name": "GitHub Actions",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-17T00:52:15Z",
+        "completed_at": "2026-11-17T00:52:16Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-17T00:52:16Z",
+        "completed_at": "2026-11-17T00:52:17Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-17T00:52:17Z",
+        "completed_at": "2026-11-17T00:52:18Z"
+      },
+      {
+        "name": "Setup Buildx",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-17T00:52:18Z",
+        "completed_at": "2026-11-17T00:52:27Z"
+      },
+      {
+        "name": "Build vote image",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-17T00:52:27Z",
+        "completed_at": "2026-11-17T00:52:29Z"
+      },
+      {
+        "name": "Build result image",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-17T00:52:29Z",
+        "completed_at": "2026-11-17T00:52:32Z"
+      },
+      {
+        "name": "Build worker image",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-17T00:52:32Z",
+        "completed_at": "2026-11-17T00:52:34Z"
+      },
+      {
+        "name": "Post Build worker image",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 10,
+        "started_at": "2026-11-17T00:52:34Z",
+        "completed_at": "2026-11-17T00:52:36Z"
+      },
+      {
+        "name": "Post Build result image",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 11,
+        "started_at": "2026-11-17T00:52:36Z",
+        "completed_at": "2026-11-17T00:52:38Z"
+      },
+      {
+        "name": "Post Build vote image",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 12,
+        "started_at": "2026-11-17T00:52:38Z",
+        "completed_at": "2026-11-17T00:52:39Z"
+      },
+      {
+        "name": "Post Setup Buildx",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-17T00:52:39Z",
+        "completed_at": "2026-11-17T00:52:39Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14,
+        "started_at": "2026-11-17T00:52:39Z",
+        "completed_at": "2026-11-17T00:52:40Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-17T00:52:40Z",
+        "completed_at": "2026-11-17T00:52:40Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 1,
+    "to_first_step_s": 2,
+    "job_s": 28,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup Buildx",
+        "conclusion": "success",
+        "seconds": 9
+      },
+      {
+        "name": "Build vote image",
+        "conclusion": "success",
+        "seconds": 2
+      },
+      {
+        "name": "Build result image",
+        "conclusion": "success",
+        "seconds": 3
+      },
+      {
+        "name": "Build worker image",
+        "conclusion": "success",
+        "seconds": 2
+      },
+      {
+        "name": "Post Build worker image",
+        "conclusion": "success",
+        "seconds": 2
+      },
+      {
+        "name": "Post Build result image",
+        "conclusion": "success",
+        "seconds": 2
+      },
+      {
+        "name": "Post Build vote image",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Post Setup Buildx",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "kernel": "7.0.0-1019-azure",
+    "mem_gb": 7.7
+  },
+  "cache": {
+    "restored": false,
+    "docker_cached_layers": 19,
+    "lines": []
+  }
+}

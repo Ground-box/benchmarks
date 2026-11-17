@@ -1,0 +1,253 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "vue-core",
+  "project_repo": "vuejs/core",
+  "project_commit": "cbd95955a5362b44060908f6e28ad447c3031b8a",
+  "runner_id": "groundbox-2vcpu",
+  "runner_label": "groundbox-2vcpu",
+  "provider": "Groundbox",
+  "kind": "warm",
+  "n": 4,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/vue-core/groundbox-2vcpu/warm-a1",
+  "tag": "2026-11-16/vue-core/groundbox-2vcpu/warm-4/a1/dnwavo",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-17T00:00:21.315Z",
+  "status": "ok",
+  "run": {
+    "id": 43984037268,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43984037268",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/vue-core/groundbox-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-17T00:00:23Z",
+    "run_started_at": "2026-11-17T00:00:23Z",
+    "updated_at": "2026-11-17T00:01:34Z"
+  },
+  "job": {
+    "id": 133707489836,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-17T00:00:24Z",
+    "started_at": "2026-11-17T00:00:30Z",
+    "completed_at": "2026-11-17T00:01:33Z",
+    "runner_name": "gbx-2vcpu-qgksmh7sho",
+    "runner_group_name": "default",
+    "labels": [
+      "groundbox-2vcpu"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-17T00:00:30Z",
+        "completed_at": "2026-11-17T00:00:31Z"
+      },
+      {
+        "name": "Set up runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-17T00:00:31Z",
+        "completed_at": "2026-11-17T00:00:31Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-17T00:00:31Z",
+        "completed_at": "2026-11-17T00:00:31Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-17T00:00:31Z",
+        "completed_at": "2026-11-17T00:00:32Z"
+      },
+      {
+        "name": "Setup pnpm",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-17T00:00:32Z",
+        "completed_at": "2026-11-17T00:00:33Z"
+      },
+      {
+        "name": "Setup Node",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-17T00:00:33Z",
+        "completed_at": "2026-11-17T00:00:37Z"
+      },
+      {
+        "name": "Install",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-17T00:00:37Z",
+        "completed_at": "2026-11-17T00:00:41Z"
+      },
+      {
+        "name": "Build",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8,
+        "started_at": "2026-11-17T00:00:41Z",
+        "completed_at": "2026-11-17T00:00:56Z"
+      },
+      {
+        "name": "Unit tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 9,
+        "started_at": "2026-11-17T00:00:56Z",
+        "completed_at": "2026-11-17T00:01:31Z"
+      },
+      {
+        "name": "Post Setup Node",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-17T00:01:31Z",
+        "completed_at": "2026-11-17T00:01:31Z"
+      },
+      {
+        "name": "Post Setup pnpm",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 16,
+        "started_at": "2026-11-17T00:01:31Z",
+        "completed_at": "2026-11-17T00:01:31Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 17,
+        "started_at": "2026-11-17T00:01:31Z",
+        "completed_at": "2026-11-17T00:01:31Z"
+      },
+      {
+        "name": "Complete runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 18,
+        "started_at": "2026-11-17T00:01:31Z",
+        "completed_at": "2026-11-17T00:01:31Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 19,
+        "started_at": "2026-11-17T00:01:31Z",
+        "completed_at": "2026-11-17T00:01:31Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 6,
+    "to_first_step_s": 6,
+    "job_s": 63,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Set up runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup pnpm",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup Node",
+        "conclusion": "success",
+        "seconds": 4
+      },
+      {
+        "name": "Install",
+        "conclusion": "success",
+        "seconds": 4
+      },
+      {
+        "name": "Build",
+        "conclusion": "success",
+        "seconds": 15
+      },
+      {
+        "name": "Unit tests",
+        "conclusion": "success",
+        "seconds": 35
+      },
+      {
+        "name": "Post Setup Node",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Setup pnpm",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC",
+    "kernel": "6.18.63",
+    "mem_gb": 7.8
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: node-cache-Linux-x64-pnpm-d1ae208ce2ab27cdb7c6689aef06ce59c1259ebdbb793d37fa1c464df8ee2ac9",
+      "Cache restored successfully",
+      "Cache restored from key: node-cache-Linux-x64-pnpm-d1ae208ce2ab27cdb7c6689aef06ce59c1259ebdbb793d37fa1c464df8ee2ac9",
+      "Cache hit occurred on the primary key node-cache-Linux-x64-pnpm-d1ae208ce2ab27cdb7c6689aef06ce59c1259ebdbb793d37fa1c464df8ee2ac9, not saving cache."
+    ]
+  }
+}

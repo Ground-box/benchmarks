@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "gh-cli",
+  "project_repo": "cli/cli",
+  "project_commit": "0536d5e5288458c696ccbeac0e68d87128300069",
+  "runner_id": "groundbox-4vcpu",
+  "runner_label": "groundbox-4vcpu",
+  "provider": "Groundbox",
+  "kind": "warm",
+  "n": 5,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/gh-cli/groundbox-4vcpu/warm-a1",
+  "tag": "2026-11-16/gh-cli/groundbox-4vcpu/warm-5/a1/o3yy76",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-16T23:35:35.610Z",
+  "status": "ok",
+  "run": {
+    "id": 43980616309,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43980616309",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/gh-cli/groundbox-4vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-16T23:35:37Z",
+    "run_started_at": "2026-11-16T23:35:37Z",
+    "updated_at": "2026-11-16T23:36:10Z"
+  },
+  "job": {
+    "id": 133695805706,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-16T23:35:38Z",
+    "started_at": "2026-11-16T23:35:39Z",
+    "completed_at": "2026-11-16T23:36:09Z",
+    "runner_name": "gbx-4vcpu-f4ehfin7jw",
+    "runner_group_name": "default",
+    "labels": [
+      "groundbox-4vcpu"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-16T23:35:40Z",
+        "completed_at": "2026-11-16T23:35:40Z"
+      },
+      {
+        "name": "Set up runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-16T23:35:40Z",
+        "completed_at": "2026-11-16T23:35:40Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-16T23:35:40Z",
+        "completed_at": "2026-11-16T23:35:40Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-16T23:35:40Z",
+        "completed_at": "2026-11-16T23:35:41Z"
+      },
+      {
+        "name": "Setup Go",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-16T23:35:41Z",
+        "completed_at": "2026-11-16T23:35:44Z"
+      },
+      {
+        "name": "Download modules",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-16T23:35:44Z",
+        "completed_at": "2026-11-16T23:35:44Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-16T23:35:44Z",
+        "completed_at": "2026-11-16T23:36:06Z"
+      },
+      {
+        "name": "Build",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8,
+        "started_at": "2026-11-16T23:36:06Z",
+        "completed_at": "2026-11-16T23:36:07Z"
+      },
+      {
+        "name": "Post Setup Go",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14,
+        "started_at": "2026-11-16T23:36:07Z",
+        "completed_at": "2026-11-16T23:36:07Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-16T23:36:07Z",
+        "completed_at": "2026-11-16T23:36:08Z"
+      },
+      {
+        "name": "Complete runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 16,
+        "started_at": "2026-11-16T23:36:08Z",
+        "completed_at": "2026-11-16T23:36:08Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 17,
+        "started_at": "2026-11-16T23:36:08Z",
+        "completed_at": "2026-11-16T23:36:08Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 1,
+    "to_first_step_s": 2,
+    "job_s": 30,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Set up runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup Go",
+        "conclusion": "success",
+        "seconds": 3
+      },
+      {
+        "name": "Download modules",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 22
+      },
+      {
+        "name": "Build",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Post Setup Go",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Complete runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 4,
+    "cpu": "AMD EPYC",
+    "kernel": "6.18.63",
+    "mem_gb": 15.6
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: setup-go-Linux-x64-undefined-go-1.27.4-a26dc37a0783fa41fffa53be5fe02bde45c2b93f90db1a5bdd92eabe864dfe78",
+      "Cache restored successfully",
+      "Cache restored from key: setup-go-Linux-x64-undefined-go-1.27.4-a26dc37a0783fa41fffa53be5fe02bde45c2b93f90db1a5bdd92eabe864dfe78",
+      "Cache hit occurred on the primary key setup-go-Linux-x64-undefined-go-1.27.4-a26dc37a0783fa41fffa53be5fe02bde45c2b93f90db1a5bdd92eabe864dfe78, not saving cache."
+    ]
+  }
+}

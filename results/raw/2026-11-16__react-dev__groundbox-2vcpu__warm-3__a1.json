@@ -1,0 +1,276 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "react-dev",
+  "project_repo": "reactjs/react.dev",
+  "project_commit": "46a54e0592729712b7640308b53268e84fdc7c9f",
+  "runner_id": "groundbox-2vcpu",
+  "runner_label": "groundbox-2vcpu",
+  "provider": "Groundbox",
+  "kind": "warm",
+  "n": 3,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/react-dev/groundbox-2vcpu/warm-a1",
+  "tag": "2026-11-16/react-dev/groundbox-2vcpu/warm-3/a1/z2wzpe",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-16T23:46:09.463Z",
+  "status": "ok",
+  "run": {
+    "id": 43982110099,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43982110099",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/react-dev/groundbox-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-16T23:46:10Z",
+    "run_started_at": "2026-11-16T23:46:10Z",
+    "updated_at": "2026-11-16T23:47:15Z"
+  },
+  "job": {
+    "id": 133700918063,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-16T23:46:12Z",
+    "started_at": "2026-11-16T23:46:18Z",
+    "completed_at": "2026-11-16T23:47:15Z",
+    "runner_name": "gbx-2vcpu-tsqym6rbzx",
+    "runner_group_name": "default",
+    "labels": [
+      "groundbox-2vcpu"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-16T23:46:18Z",
+        "completed_at": "2026-11-16T23:46:19Z"
+      },
+      {
+        "name": "Set up runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-16T23:46:19Z",
+        "completed_at": "2026-11-16T23:46:19Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-16T23:46:19Z",
+        "completed_at": "2026-11-16T23:46:19Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-16T23:46:19Z",
+        "completed_at": "2026-11-16T23:46:20Z"
+      },
+      {
+        "name": "Setup Node",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-16T23:46:20Z",
+        "completed_at": "2026-11-16T23:46:25Z"
+      },
+      {
+        "name": "Next.js build cache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-16T23:46:25Z",
+        "completed_at": "2026-11-16T23:46:25Z"
+      },
+      {
+        "name": "Install",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-16T23:46:25Z",
+        "completed_at": "2026-11-16T23:46:29Z"
+      },
+      {
+        "name": "Build",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8,
+        "started_at": "2026-11-16T23:46:29Z",
+        "completed_at": "2026-11-16T23:47:13Z"
+      },
+      {
+        "name": "Post Next.js build cache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-16T23:47:13Z",
+        "completed_at": "2026-11-16T23:47:13Z"
+      },
+      {
+        "name": "Post Setup Node",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14,
+        "started_at": "2026-11-16T23:47:13Z",
+        "completed_at": "2026-11-16T23:47:13Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-16T23:47:13Z",
+        "completed_at": "2026-11-16T23:47:13Z"
+      },
+      {
+        "name": "Complete runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 16,
+        "started_at": "2026-11-16T23:47:13Z",
+        "completed_at": "2026-11-16T23:47:13Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 17,
+        "started_at": "2026-11-16T23:47:13Z",
+        "completed_at": "2026-11-16T23:47:13Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 6,
+    "to_first_step_s": 6,
+    "job_s": 57,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Set up runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup Node",
+        "conclusion": "success",
+        "seconds": 5
+      },
+      {
+        "name": "Next.js build cache",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Install",
+        "conclusion": "success",
+        "seconds": 4
+      },
+      {
+        "name": "Build",
+        "conclusion": "success",
+        "seconds": 44
+      },
+      {
+        "name": "Post Next.js build cache",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Setup Node",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC",
+    "kernel": "6.18.63",
+    "mem_gb": 7.8
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: node-cache-Linux-x64-yarn-580776be30cab6750e38524f37da4dd51e8814218181dafeab91606086b63adf",
+      "Cache restored successfully",
+      "Cache restored from key: node-cache-Linux-x64-yarn-580776be30cab6750e38524f37da4dd51e8814218181dafeab91606086b63adf",
+      "Cache hit for: nextjs-Linux-580776be30cab6750e38524f37da4dd51e8814218181dafeab91606086b63adf",
+      "Cache restored successfully",
+      "Cache restored from key: nextjs-Linux-580776be30cab6750e38524f37da4dd51e8814218181dafeab91606086b63adf",
+      "Cache miss for MDX for /blog/2020/12/21/data-fetching-with-react-server-components from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2021/06/08/the-plan-for-react-18 from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2022/03/08/react-18-upgrade-guide from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2021/12/17/react-conf-2021-recap from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2022/03/29/react-v18 from ./node_modules/.cache/",
+      "Cache miss for MDX for /index from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2022/06/15/react-labs-what-we-have-been-working-on-june-2022 from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2023/03/16/introducing-react-dev from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2024/02/15/react-labs-what-we-have-been-working-on-february-2024 from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2023/05/03/react-canaries from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2024/04/25/react-19-upgrade-guide from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2024/05/22/react-conf-2024-recap from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2024/10/21/react-compiler-beta-release from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2023/03/22/react-labs-what-we-have-been-working-on-march-2023 from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2024/12/05/react-19 from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2025/02/14/sunsetting-create-react-app from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2025/04/23/react-labs-view-transitions-activity-and-more from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2025/10/01/react-19-2 from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2025/12/03/critical-security-vulnerability-in-react-server-components from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2025/10/07/introducing-the-react-foundation from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2025/10/16/react-conf-2025-recap from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2025/10/07/react-compiler-1 from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components from ./node_modules/.cache/",
+      "Cache miss for MDX for /community/acknowledgements from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog from ./node_modules/.cache/",
+      "Cache miss for MDX for /community/conferences from ./node_modules/.cache/",
+      "Cache miss for MDX for /community/docs-contributors from ./node_modules/.cache/",
+      "Cache miss for MDX for /community from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2026/02/24/the-react-foundation from ./node_modules/.cache/",
+      "Cache miss for MDX for /blog/2026/09/09/react-19-3 from ./node_modules/.cache/",
+      "Cache miss for MDX for /learn/add-react-to-an-existing-project from ./node_modules/.cache/",
+      "Cache miss for MDX for /community/meetups from ./node_modules/.cache/",
+      "Cache miss for MDX for /community/team from ./node_modules/.cache/",
+      "Cache miss for MDX for /community/translations from ./node_modules/.cache/"
+    ]
+  }
+}

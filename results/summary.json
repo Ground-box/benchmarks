@@ -1,0 +1,5549 @@
+{
+  "series": "2026-11-16",
+  "generated_at": "2026-11-17T02:40:04.579Z",
+  "first_run_at": "2026-11-16T22:05:06.771Z",
+  "last_run_at": "2026-11-17T02:39:53Z",
+  "harness_commits": [
+    "ae93ed749e7145533eda2d89e67ccea84c230218"
+  ],
+  "definitions": {
+    "job_s": "job started_at to completed_at from the GitHub API: the whole job, with setup and post steps",
+    "queue_s": "job created_at to started_at from the GitHub API: the wait for a runner",
+    "to_first_step_s": "job created_at to the first step's started_at",
+    "ratio": "baseline median job time divided by candidate median job time; above 1 means the candidate was faster",
+    "cold": "no Actions cache entry exists for the branch the run is on",
+    "warm": "run on a branch whose cache was filled by one earlier run of the same job"
+  },
+  "runners": {
+    "github-2vcpu": {
+      "label": "ubuntu-latest",
+      "provider": "GitHub-hosted",
+      "vcpus": [
+        2
+      ],
+      "memory_gb": [
+        7.7,
+        7.6
+      ],
+      "cpu_models": [
+        "AMD EPYC 9V74 80-Core Processor",
+        "AMD EPYC 7763 64-Core Processor",
+        "Intel(R) Xeon(R) 6975P-C",
+        "INTEL(R) XEON(R) PLATINUM 8573C",
+        "AMD EPYC 9V45 96-Core Processor",
+        "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz"
+      ]
+    },
+    "groundbox-2vcpu": {
+      "label": "groundbox-2vcpu",
+      "provider": "Groundbox",
+      "vcpus": [
+        2
+      ],
+      "memory_gb": [
+        7.8
+      ],
+      "cpu_models": [
+        "AMD EPYC"
+      ]
+    },
+    "groundbox-4vcpu": {
+      "label": "groundbox-4vcpu",
+      "provider": "Groundbox",
+      "vcpus": [
+        4
+      ],
+      "memory_gb": [
+        15.6
+      ],
+      "cpu_models": [
+        "AMD EPYC"
+      ]
+    }
+  },
+  "runs": {
+    "total": 243,
+    "ok": 240,
+    "not_ok": 3
+  },
+  "projects": [
+    {
+      "id": "vue-core",
+      "name": "Vue core",
+      "repo": "vuejs/core",
+      "commit": "cbd95955a5362b44060908f6e28ad447c3031b8a",
+      "shape": "TypeScript monorepo (pnpm): install, build every package, unit tests",
+      "runners": {
+        "github-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 2,
+            "min": 1,
+            "max": 4
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 2,
+            "min": 2,
+            "max": 5
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 158,
+              "min": 126,
+              "max": 160
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 2
+              },
+              "Setup pnpm": {
+                "n": 3,
+                "median": 4,
+                "min": 4,
+                "max": 6
+              },
+              "Setup Node": {
+                "n": 3,
+                "median": 6,
+                "min": 5,
+                "max": 8
+              },
+              "Install": {
+                "n": 3,
+                "median": 8,
+                "min": 7,
+                "max": 9
+              },
+              "Build": {
+                "n": 3,
+                "median": 42,
+                "min": 34,
+                "max": 45
+              },
+              "Unit tests": {
+                "n": 3,
+                "median": 82,
+                "min": 66,
+                "max": 86
+              },
+              "Post Setup Node": {
+                "n": 3,
+                "median": 5,
+                "min": 4,
+                "max": 5
+              },
+              "Post Setup pnpm": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 151,
+              "min": 113,
+              "max": 159
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 5
+              },
+              "Setup pnpm": {
+                "n": 5,
+                "median": 5,
+                "min": 4,
+                "max": 9
+              },
+              "Setup Node": {
+                "n": 5,
+                "median": 9,
+                "min": 4,
+                "max": 9
+              },
+              "Install": {
+                "n": 5,
+                "median": 6,
+                "min": 5,
+                "max": 7
+              },
+              "Build": {
+                "n": 5,
+                "median": 40,
+                "min": 31,
+                "max": 45
+              },
+              "Unit tests": {
+                "n": 5,
+                "median": 85,
+                "min": 58,
+                "max": 86
+              },
+              "Post Setup Node": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Setup pnpm": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 6,
+            "min": 5,
+            "max": 6
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 6,
+            "min": 6,
+            "max": 7
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 68,
+              "min": 68,
+              "max": 98
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup pnpm": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 2
+              },
+              "Setup Node": {
+                "n": 3,
+                "median": 3,
+                "min": 3,
+                "max": 4
+              },
+              "Install": {
+                "n": 3,
+                "median": 3,
+                "min": 3,
+                "max": 4
+              },
+              "Build": {
+                "n": 3,
+                "median": 17,
+                "min": 16,
+                "max": 24
+              },
+              "Unit tests": {
+                "n": 3,
+                "median": 39,
+                "min": 38,
+                "max": 59
+              },
+              "Post Setup Node": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Setup pnpm": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 63,
+              "min": 61,
+              "max": 67
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Setup pnpm": {
+                "n": 5,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Setup Node": {
+                "n": 5,
+                "median": 3,
+                "min": 3,
+                "max": 4
+              },
+              "Install": {
+                "n": 5,
+                "median": 3,
+                "min": 2,
+                "max": 4
+              },
+              "Build": {
+                "n": 5,
+                "median": 16,
+                "min": 15,
+                "max": 17
+              },
+              "Unit tests": {
+                "n": 5,
+                "median": 36,
+                "min": 35,
+                "max": 39
+              },
+              "Post Setup Node": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Setup pnpm": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-4vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 0,
+            "max": 1
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 1,
+            "min": 0,
+            "max": 1
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 41,
+              "min": 39,
+              "max": 48
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup pnpm": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 2
+              },
+              "Setup Node": {
+                "n": 3,
+                "median": 3,
+                "min": 2,
+                "max": 3
+              },
+              "Install": {
+                "n": 3,
+                "median": 3,
+                "min": 1,
+                "max": 3
+              },
+              "Build": {
+                "n": 3,
+                "median": 13,
+                "min": 11,
+                "max": 16
+              },
+              "Unit tests": {
+                "n": 3,
+                "median": 17,
+                "min": 15,
+                "max": 21
+              },
+              "Post Setup Node": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Setup pnpm": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 38,
+              "min": 37,
+              "max": 42
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Setup pnpm": {
+                "n": 5,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Setup Node": {
+                "n": 5,
+                "median": 3,
+                "min": 3,
+                "max": 4
+              },
+              "Install": {
+                "n": 5,
+                "median": 3,
+                "min": 2,
+                "max": 3
+              },
+              "Build": {
+                "n": 5,
+                "median": 11,
+                "min": 11,
+                "max": 12
+              },
+              "Unit tests": {
+                "n": 5,
+                "median": 16,
+                "min": 15,
+                "max": 18
+              },
+              "Post Setup Node": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Setup pnpm": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "github-2vcpu",
+          "candidate": "groundbox-2vcpu",
+          "cold_ratio": 2.32,
+          "warm_ratio": 2.4
+        }
+      ],
+      "not_ok": []
+    },
+    {
+      "id": "react-dev",
+      "name": "react.dev",
+      "repo": "reactjs/react.dev",
+      "commit": "46a54e0592729712b7640308b53268e84fdc7c9f",
+      "shape": "Next.js site: install and production build",
+      "runners": {
+        "github-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 2,
+            "min": 1,
+            "max": 3
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 3,
+            "min": 2,
+            "max": 4
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 212,
+              "min": 209,
+              "max": 331
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 3,
+                "min": 2,
+                "max": 172
+              },
+              "Setup Node": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Next.js build cache": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Install": {
+                "n": 3,
+                "median": 58,
+                "min": 49,
+                "max": 82
+              },
+              "Build": {
+                "n": 3,
+                "median": 105,
+                "min": 84,
+                "max": 132
+              },
+              "Post Next.js build cache": {
+                "n": 3,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Post Setup Node": {
+                "n": 3,
+                "median": 13,
+                "min": 12,
+                "max": 17
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 173,
+              "min": 164,
+              "max": 190
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 2
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 2,
+                "min": 2,
+                "max": 6
+              },
+              "Setup Node": {
+                "n": 5,
+                "median": 38,
+                "min": 22,
+                "max": 44
+              },
+              "Next.js build cache": {
+                "n": 5,
+                "median": 2,
+                "min": 1,
+                "max": 3
+              },
+              "Install": {
+                "n": 5,
+                "median": 30,
+                "min": 19,
+                "max": 37
+              },
+              "Build": {
+                "n": 5,
+                "median": 107,
+                "min": 88,
+                "max": 120
+              },
+              "Post Next.js build cache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Setup Node": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 6,
+            "min": 5,
+            "max": 14
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 6,
+            "min": 6,
+            "max": 14
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 84,
+              "min": 84,
+              "max": 100
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Node": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Next.js build cache": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Install": {
+                "n": 3,
+                "median": 20,
+                "min": 19,
+                "max": 20
+              },
+              "Build": {
+                "n": 3,
+                "median": 55,
+                "min": 54,
+                "max": 70
+              },
+              "Post Next.js build cache": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Post Setup Node": {
+                "n": 3,
+                "median": 5,
+                "min": 5,
+                "max": 6
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 58,
+              "min": 57,
+              "max": 64
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Node": {
+                "n": 5,
+                "median": 5,
+                "min": 5,
+                "max": 9
+              },
+              "Next.js build cache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Install": {
+                "n": 5,
+                "median": 4,
+                "min": 4,
+                "max": 5
+              },
+              "Build": {
+                "n": 5,
+                "median": 45,
+                "min": 44,
+                "max": 49
+              },
+              "Post Next.js build cache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Setup Node": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-4vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 0,
+            "max": 1
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 2
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 73,
+              "min": 65,
+              "max": 83
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Node": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 4
+              },
+              "Next.js build cache": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Install": {
+                "n": 3,
+                "median": 14,
+                "min": 14,
+                "max": 21
+              },
+              "Build": {
+                "n": 3,
+                "median": 46,
+                "min": 42,
+                "max": 53
+              },
+              "Post Next.js build cache": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Setup Node": {
+                "n": 3,
+                "median": 4,
+                "min": 4,
+                "max": 5
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 47,
+              "min": 47,
+              "max": 52
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Node": {
+                "n": 5,
+                "median": 4,
+                "min": 4,
+                "max": 7
+              },
+              "Next.js build cache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Install": {
+                "n": 5,
+                "median": 4,
+                "min": 3,
+                "max": 4
+              },
+              "Build": {
+                "n": 5,
+                "median": 36,
+                "min": 35,
+                "max": 39
+              },
+              "Post Next.js build cache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Setup Node": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "github-2vcpu",
+          "candidate": "groundbox-2vcpu",
+          "cold_ratio": 2.52,
+          "warm_ratio": 2.98
+        }
+      ],
+      "not_ok": [
+        {
+          "runner": "github-2vcpu",
+          "kind": "cold",
+          "n": 1,
+          "attempt": 1,
+          "status": "failure",
+          "url": "https://github.com/Ground-box/benchmarks/actions/runs/43967046037",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "pytest",
+      "name": "pytest",
+      "repo": "pytest-dev/pytest",
+      "commit": "50234b4e670064c42a4c29cb6258115a2079ba4c",
+      "shape": "Python: pip install, its own test suite under pytest-xdist",
+      "runners": {
+        "github-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 2,
+            "min": 1,
+            "max": 2
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 3,
+            "min": 2,
+            "max": 3
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 207,
+              "min": 157,
+              "max": 237
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 7,
+                "min": 5,
+                "max": 7
+              },
+              "Setup Python": {
+                "n": 3,
+                "median": 2,
+                "min": 1,
+                "max": 4
+              },
+              "Install": {
+                "n": 3,
+                "median": 12,
+                "min": 8,
+                "max": 13
+              },
+              "Tests": {
+                "n": 3,
+                "median": 178,
+                "min": 137,
+                "max": 209
+              },
+              "Post Setup Python": {
+                "n": 3,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 211,
+              "min": 162,
+              "max": 238
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 4
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 7,
+                "min": 5,
+                "max": 10
+              },
+              "Setup Python": {
+                "n": 5,
+                "median": 3,
+                "min": 1,
+                "max": 6
+              },
+              "Install": {
+                "n": 5,
+                "median": 10,
+                "min": 8,
+                "max": 11
+              },
+              "Tests": {
+                "n": 5,
+                "median": 186,
+                "min": 129,
+                "max": 214
+              },
+              "Post Setup Python": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 6.5,
+            "min": 4,
+            "max": 8
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 7,
+            "min": 4,
+            "max": 9
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 100,
+              "min": 97,
+              "max": 112
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 3,
+                "min": 3,
+                "max": 3
+              },
+              "Setup Python": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Install": {
+                "n": 3,
+                "median": 6,
+                "min": 5,
+                "max": 7
+              },
+              "Tests": {
+                "n": 3,
+                "median": 90,
+                "min": 84,
+                "max": 99
+              },
+              "Post Setup Python": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 91,
+              "min": 90,
+              "max": 101
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 3,
+                "min": 2,
+                "max": 3
+              },
+              "Setup Python": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Install": {
+                "n": 5,
+                "median": 6,
+                "min": 4,
+                "max": 6
+              },
+              "Tests": {
+                "n": 5,
+                "median": 80,
+                "min": 79,
+                "max": 92
+              },
+              "Post Setup Python": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-4vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 0,
+            "max": 1
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 1
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 77,
+              "min": 68,
+              "max": 88
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 3,
+                "min": 2,
+                "max": 3
+              },
+              "Setup Python": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Install": {
+                "n": 3,
+                "median": 6,
+                "min": 6,
+                "max": 7
+              },
+              "Tests": {
+                "n": 3,
+                "median": 65,
+                "min": 56,
+                "max": 75
+              },
+              "Post Setup Python": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 68,
+              "min": 57,
+              "max": 71
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 3,
+                "min": 2,
+                "max": 3
+              },
+              "Setup Python": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Install": {
+                "n": 5,
+                "median": 6,
+                "min": 5,
+                "max": 6
+              },
+              "Tests": {
+                "n": 5,
+                "median": 57,
+                "min": 46,
+                "max": 60
+              },
+              "Post Setup Python": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "github-2vcpu",
+          "candidate": "groundbox-2vcpu",
+          "cold_ratio": 2.07,
+          "warm_ratio": 2.32
+        }
+      ],
+      "not_ok": [
+        {
+          "runner": "groundbox-4vcpu",
+          "kind": "warm",
+          "n": 2,
+          "attempt": 1,
+          "status": "failure",
+          "url": "https://github.com/Ground-box/benchmarks/actions/runs/43975316034",
+          "error": null
+        }
+      ]
+    },
+    {
+      "id": "ripgrep",
+      "name": "ripgrep",
+      "repo": "BurntSushi/ripgrep",
+      "commit": "178cc027e283fd965cb72d0a7395b219eada170c",
+      "shape": "Rust: release build, then the workspace tests",
+      "runners": {
+        "github-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1.5,
+            "min": 1,
+            "max": 2
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 2,
+            "min": 2,
+            "max": 3
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 95,
+              "min": 80,
+              "max": 118
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Setup Rust": {
+                "n": 3,
+                "median": 9,
+                "min": 9,
+                "max": 9
+              },
+              "Cargo cache": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Build (release)": {
+                "n": 3,
+                "median": 41,
+                "min": 33,
+                "max": 53
+              },
+              "Tests": {
+                "n": 3,
+                "median": 34,
+                "min": 27,
+                "max": 43
+              },
+              "Post Cargo cache": {
+                "n": 3,
+                "median": 5,
+                "min": 5,
+                "max": 6
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 58,
+              "min": 47,
+              "max": 66
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Rust": {
+                "n": 5,
+                "median": 9,
+                "min": 9,
+                "max": 11
+              },
+              "Cargo cache": {
+                "n": 5,
+                "median": 3,
+                "min": 2,
+                "max": 3
+              },
+              "Build (release)": {
+                "n": 5,
+                "median": 19,
+                "min": 16,
+                "max": 23
+              },
+              "Tests": {
+                "n": 5,
+                "median": 20,
+                "min": 15,
+                "max": 24
+              },
+              "Post Cargo cache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 5.5,
+            "min": 4,
+            "max": 6
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 6,
+            "min": 5,
+            "max": 7
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 45,
+              "min": 44,
+              "max": 45
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Rust": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Cargo cache": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Build (release)": {
+                "n": 3,
+                "median": 22,
+                "min": 22,
+                "max": 25
+              },
+              "Tests": {
+                "n": 3,
+                "median": 17,
+                "min": 16,
+                "max": 19
+              },
+              "Post Cargo cache": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 23,
+              "min": 22,
+              "max": 28
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Rust": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Cargo cache": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Build (release)": {
+                "n": 5,
+                "median": 9,
+                "min": 9,
+                "max": 10
+              },
+              "Tests": {
+                "n": 5,
+                "median": 10,
+                "min": 10,
+                "max": 13
+              },
+              "Post Cargo cache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-4vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 0,
+            "max": 1
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 2
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 26,
+              "min": 26,
+              "max": 31
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Rust": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Cargo cache": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Build (release)": {
+                "n": 3,
+                "median": 12,
+                "min": 12,
+                "max": 13
+              },
+              "Tests": {
+                "n": 3,
+                "median": 10,
+                "min": 10,
+                "max": 14
+              },
+              "Post Cargo cache": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 16,
+              "min": 16,
+              "max": 19
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Rust": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Cargo cache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 2
+              },
+              "Build (release)": {
+                "n": 5,
+                "median": 6,
+                "min": 5,
+                "max": 7
+              },
+              "Tests": {
+                "n": 5,
+                "median": 7,
+                "min": 6,
+                "max": 8
+              },
+              "Post Cargo cache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "github-2vcpu",
+          "candidate": "groundbox-2vcpu",
+          "cold_ratio": 2.11,
+          "warm_ratio": 2.52
+        }
+      ],
+      "not_ok": []
+    },
+    {
+      "id": "gh-cli",
+      "name": "GitHub CLI",
+      "repo": "cli/cli",
+      "commit": "0536d5e5288458c696ccbeac0e68d87128300069",
+      "shape": "Go: module download, unit tests, build",
+      "runners": {
+        "github-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 2,
+            "min": 1,
+            "max": 2
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 2.5,
+            "min": 2,
+            "max": 3
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 299,
+              "min": 291,
+              "max": 425
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 3
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 6
+              },
+              "Setup Go": {
+                "n": 3,
+                "median": 8,
+                "min": 7,
+                "max": 10
+              },
+              "Download modules": {
+                "n": 3,
+                "median": 8,
+                "min": 6,
+                "max": 11
+              },
+              "Tests": {
+                "n": 3,
+                "median": 202,
+                "min": 186,
+                "max": 285
+              },
+              "Build": {
+                "n": 3,
+                "median": 67,
+                "min": 63,
+                "max": 105
+              },
+              "Post Setup Go": {
+                "n": 3,
+                "median": 10,
+                "min": 8,
+                "max": 11
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 128,
+              "min": 123,
+              "max": 135
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 2,
+                "min": 2,
+                "max": 3
+              },
+              "Setup Go": {
+                "n": 5,
+                "median": 30,
+                "min": 20,
+                "max": 34
+              },
+              "Download modules": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Tests": {
+                "n": 5,
+                "median": 88,
+                "min": 81,
+                "max": 100
+              },
+              "Build": {
+                "n": 5,
+                "median": 2,
+                "min": 2,
+                "max": 3
+              },
+              "Post Setup Go": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 5,
+            "min": 5,
+            "max": 8
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 6,
+            "min": 5,
+            "max": 8
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 150,
+              "min": 145,
+              "max": 186
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Go": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Download modules": {
+                "n": 3,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Tests": {
+                "n": 3,
+                "median": 106,
+                "min": 102,
+                "max": 141
+              },
+              "Build": {
+                "n": 3,
+                "median": 34,
+                "min": 34,
+                "max": 37
+              },
+              "Post Setup Go": {
+                "n": 3,
+                "median": 4,
+                "min": 3,
+                "max": 4
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 52,
+              "min": 46,
+              "max": 55
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Setup Go": {
+                "n": 5,
+                "median": 3,
+                "min": 3,
+                "max": 4
+              },
+              "Download modules": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Tests": {
+                "n": 5,
+                "median": 44,
+                "min": 38,
+                "max": 47
+              },
+              "Build": {
+                "n": 5,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Post Setup Go": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-4vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 1
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 2
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 84,
+              "min": 83,
+              "max": 109
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Go": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Download modules": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Tests": {
+                "n": 3,
+                "median": 57,
+                "min": 57,
+                "max": 82
+              },
+              "Build": {
+                "n": 3,
+                "median": 20,
+                "min": 19,
+                "max": 21
+              },
+              "Post Setup Go": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 2
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 30,
+              "min": 30,
+              "max": 34
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Go": {
+                "n": 5,
+                "median": 3,
+                "min": 2,
+                "max": 3
+              },
+              "Download modules": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Tests": {
+                "n": 5,
+                "median": 24,
+                "min": 22,
+                "max": 26
+              },
+              "Build": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Post Setup Go": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "github-2vcpu",
+          "candidate": "groundbox-2vcpu",
+          "cold_ratio": 1.99,
+          "warm_ratio": 2.46
+        }
+      ],
+      "not_ok": []
+    },
+    {
+      "id": "spring-petclinic",
+      "name": "Spring PetClinic",
+      "repo": "spring-projects/spring-petclinic",
+      "commit": "500158f732419217507c7656904b8e6aa1bcc0d6",
+      "shape": "Java 17 and Maven: ./mvnw verify, with tests that start database containers",
+      "runners": {
+        "github-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 2,
+            "min": 1,
+            "max": 2
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 2.5,
+            "min": 2,
+            "max": 3
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 137,
+              "min": 137,
+              "max": 142
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Java": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Build and test": {
+                "n": 3,
+                "median": 128,
+                "min": 128,
+                "max": 134
+              },
+              "Post Setup Java": {
+                "n": 3,
+                "median": 3,
+                "min": 3,
+                "max": 4
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 120,
+              "min": 105,
+              "max": 127
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Setup Java": {
+                "n": 5,
+                "median": 3,
+                "min": 2,
+                "max": 4
+              },
+              "Build and test": {
+                "n": 5,
+                "median": 110,
+                "min": 98,
+                "max": 115
+              },
+              "Post Setup Java": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 5.5,
+            "min": 4,
+            "max": 10
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 6,
+            "min": 5,
+            "max": 11
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 65,
+              "min": 65,
+              "max": 81
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Java": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Build and test": {
+                "n": 3,
+                "median": 61,
+                "min": 60,
+                "max": 75
+              },
+              "Post Setup Java": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 48,
+              "min": 46,
+              "max": 50
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Java": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 5
+              },
+              "Build and test": {
+                "n": 5,
+                "median": 42,
+                "min": 42,
+                "max": 45
+              },
+              "Post Setup Java": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-4vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 0,
+            "max": 1
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 1
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 67,
+              "min": 59,
+              "max": 71
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Java": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Build and test": {
+                "n": 3,
+                "median": 64,
+                "min": 54,
+                "max": 67
+              },
+              "Post Setup Java": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 39,
+              "min": 39,
+              "max": 40
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Setup Java": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Build and test": {
+                "n": 5,
+                "median": 36,
+                "min": 35,
+                "max": 36
+              },
+              "Post Setup Java": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "github-2vcpu",
+          "candidate": "groundbox-2vcpu",
+          "cold_ratio": 2.11,
+          "warm_ratio": 2.5
+        }
+      ],
+      "not_ok": []
+    },
+    {
+      "id": "voting-app-docker",
+      "name": "Example Voting App",
+      "repo": "dockersamples/example-voting-app",
+      "commit": "63e9150ca17af4ed05880d4245e486481f73fcb4",
+      "shape": "Docker: three image builds (Python, Node, .NET multi-stage)",
+      "runners": {
+        "github-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 2
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 2,
+            "min": 2,
+            "max": 3
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 97,
+              "min": 92,
+              "max": 118
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Buildx": {
+                "n": 3,
+                "median": 9,
+                "min": 6,
+                "max": 10
+              },
+              "Build vote image": {
+                "n": 3,
+                "median": 18,
+                "min": 18,
+                "max": 20
+              },
+              "Build result image": {
+                "n": 3,
+                "median": 19,
+                "min": 18,
+                "max": 22
+              },
+              "Build worker image": {
+                "n": 3,
+                "median": 39,
+                "min": 37,
+                "max": 52
+              },
+              "Post Build worker image": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 2
+              },
+              "Post Build result image": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Post Build vote image": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Post Setup Buildx": {
+                "n": 3,
+                "median": 3,
+                "min": 3,
+                "max": 4
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 31,
+              "min": 23,
+              "max": 34
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 2,
+                "min": 1,
+                "max": 3
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 5
+              },
+              "Setup Buildx": {
+                "n": 5,
+                "median": 7,
+                "min": 7,
+                "max": 11
+              },
+              "Build vote image": {
+                "n": 5,
+                "median": 2,
+                "min": 2,
+                "max": 5
+              },
+              "Build result image": {
+                "n": 5,
+                "median": 3,
+                "min": 2,
+                "max": 4
+              },
+              "Build worker image": {
+                "n": 5,
+                "median": 2,
+                "min": 2,
+                "max": 4
+              },
+              "Post Build worker image": {
+                "n": 5,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Post Build result image": {
+                "n": 5,
+                "median": 2,
+                "min": 1,
+                "max": 3
+              },
+              "Post Build vote image": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Post Setup Buildx": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 6,
+            "min": 4,
+            "max": 16
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 6,
+            "min": 4,
+            "max": 17
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 36,
+              "min": 34,
+              "max": 39
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Buildx": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 2
+              },
+              "Build vote image": {
+                "n": 3,
+                "median": 7,
+                "min": 7,
+                "max": 8
+              },
+              "Build result image": {
+                "n": 3,
+                "median": 7,
+                "min": 6,
+                "max": 7
+              },
+              "Build worker image": {
+                "n": 3,
+                "median": 12,
+                "min": 12,
+                "max": 15
+              },
+              "Post Build worker image": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Post Build result image": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Post Build vote image": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Setup Buildx": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 11,
+              "min": 9,
+              "max": 12
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Buildx": {
+                "n": 5,
+                "median": 2,
+                "min": 2,
+                "max": 3
+              },
+              "Build vote image": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Build result image": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Build worker image": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Post Build worker image": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Build result image": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Build vote image": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Setup Buildx": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-4vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 0,
+            "max": 1
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 2
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 30,
+              "min": 30,
+              "max": 35
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Buildx": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 2
+              },
+              "Build vote image": {
+                "n": 3,
+                "median": 6,
+                "min": 6,
+                "max": 7
+              },
+              "Build result image": {
+                "n": 3,
+                "median": 5,
+                "min": 5,
+                "max": 6
+              },
+              "Build worker image": {
+                "n": 3,
+                "median": 10,
+                "min": 10,
+                "max": 12
+              },
+              "Post Build worker image": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Build result image": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Build vote image": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Setup Buildx": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 10,
+              "min": 10,
+              "max": 10
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Buildx": {
+                "n": 5,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Build vote image": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Build result image": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Build worker image": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Build worker image": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Build result image": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Build vote image": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Setup Buildx": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "github-2vcpu",
+          "candidate": "groundbox-2vcpu",
+          "cold_ratio": 2.69,
+          "warm_ratio": 2.82
+        }
+      ],
+      "not_ok": []
+    },
+    {
+      "id": "fmt",
+      "name": "{fmt}",
+      "repo": "fmtlib/fmt",
+      "commit": "14ac0d5a9d40aef14f50954069c1e10971abb0b2",
+      "shape": "C++: CMake configure, build, ctest",
+      "runners": {
+        "github-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 2,
+            "min": 1,
+            "max": 2
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 3,
+            "min": 2,
+            "max": 3
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 209,
+              "min": 160,
+              "max": 217
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 2
+              },
+              "ccache": {
+                "n": 3,
+                "median": 8,
+                "min": 8,
+                "max": 19
+              },
+              "Configure": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 5
+              },
+              "Build": {
+                "n": 3,
+                "median": 192,
+                "min": 130,
+                "max": 197
+              },
+              "Tests": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post ccache": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 28,
+              "min": 21,
+              "max": 31
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "ccache": {
+                "n": 5,
+                "median": 9,
+                "min": 8,
+                "max": 11
+              },
+              "Configure": {
+                "n": 5,
+                "median": 3,
+                "min": 2,
+                "max": 5
+              },
+              "Build": {
+                "n": 5,
+                "median": 9,
+                "min": 3,
+                "max": 11
+              },
+              "Tests": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 3
+              },
+              "Post ccache": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 5,
+            "min": 5,
+            "max": 19
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 6,
+            "min": 5,
+            "max": 19
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 77,
+              "min": 71,
+              "max": 83
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "ccache": {
+                "n": 3,
+                "median": 3,
+                "min": 3,
+                "max": 4
+              },
+              "Configure": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Build": {
+                "n": 3,
+                "median": 70,
+                "min": 65,
+                "max": 77
+              },
+              "Tests": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post ccache": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 64,
+              "min": 63,
+              "max": 73
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "ccache": {
+                "n": 5,
+                "median": 3,
+                "min": 3,
+                "max": 4
+              },
+              "Configure": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Build": {
+                "n": 5,
+                "median": 57,
+                "min": 56,
+                "max": 65
+              },
+              "Tests": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post ccache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          }
+        },
+        "groundbox-4vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 0,
+            "max": 1
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 2
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 43,
+              "min": 43,
+              "max": 45
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "ccache": {
+                "n": 3,
+                "median": 3,
+                "min": 2,
+                "max": 3
+              },
+              "Configure": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Build": {
+                "n": 3,
+                "median": 37,
+                "min": 36,
+                "max": 37
+              },
+              "Tests": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post ccache": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 43,
+              "min": 42,
+              "max": 48
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "ccache": {
+                "n": 5,
+                "median": 3,
+                "min": 3,
+                "max": 3
+              },
+              "Configure": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Build": {
+                "n": 5,
+                "median": 36,
+                "min": 35,
+                "max": 41
+              },
+              "Tests": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post ccache": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "github-2vcpu",
+          "candidate": "groundbox-2vcpu",
+          "cold_ratio": 2.71,
+          "warm_ratio": 0.44
+        }
+      ],
+      "not_ok": []
+    },
+    {
+      "id": "jekyll",
+      "name": "Jekyll",
+      "repo": "jekyll/jekyll",
+      "commit": "97c3bdc822df9d5bea4c269b29a28de5a5e29d70",
+      "shape": "Ruby: bundle install, Minitest suite, generate and build a site",
+      "runners": {
+        "github-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 3
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 2,
+            "min": 1,
+            "max": 4
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 134,
+              "min": 97,
+              "max": 139
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Setup Ruby": {
+                "n": 3,
+                "median": 51,
+                "min": 33,
+                "max": 53
+              },
+              "Tests": {
+                "n": 3,
+                "median": 46,
+                "min": 42,
+                "max": 49
+              },
+              "Generate and build a new site": {
+                "n": 3,
+                "median": 32,
+                "min": 18,
+                "max": 33
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 89,
+              "min": 67,
+              "max": 94
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Setup Ruby": {
+                "n": 5,
+                "median": 8,
+                "min": 6,
+                "max": 10
+              },
+              "Tests": {
+                "n": 5,
+                "median": 45,
+                "min": 34,
+                "max": 54
+              },
+              "Generate and build a new site": {
+                "n": 5,
+                "median": 23,
+                "min": 20,
+                "max": 34
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 6,
+            "min": 4,
+            "max": 7
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 6.5,
+            "min": 4,
+            "max": 8
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 71,
+              "min": 60,
+              "max": 76
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Ruby": {
+                "n": 3,
+                "median": 17,
+                "min": 16,
+                "max": 18
+              },
+              "Tests": {
+                "n": 3,
+                "median": 39,
+                "min": 28,
+                "max": 42
+              },
+              "Generate and build a new site": {
+                "n": 3,
+                "median": 12,
+                "min": 11,
+                "max": 14
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 50,
+              "min": 44,
+              "max": 66
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Ruby": {
+                "n": 5,
+                "median": 5,
+                "min": 4,
+                "max": 5
+              },
+              "Tests": {
+                "n": 5,
+                "median": 32,
+                "min": 26,
+                "max": 43
+              },
+              "Generate and build a new site": {
+                "n": 5,
+                "median": 10,
+                "min": 10,
+                "max": 14
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-4vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 0,
+            "min": 0,
+            "max": 1
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 1,
+            "min": 0,
+            "max": 2
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 55,
+              "min": 55,
+              "max": 72
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Setup Ruby": {
+                "n": 3,
+                "median": 12,
+                "min": 11,
+                "max": 14
+              },
+              "Tests": {
+                "n": 3,
+                "median": 33,
+                "min": 32,
+                "max": 43
+              },
+              "Generate and build a new site": {
+                "n": 3,
+                "median": 9,
+                "min": 8,
+                "max": 12
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 50,
+              "min": 46,
+              "max": 53
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Setup Ruby": {
+                "n": 5,
+                "median": 4,
+                "min": 3,
+                "max": 4
+              },
+              "Tests": {
+                "n": 5,
+                "median": 34,
+                "min": 31,
+                "max": 38
+              },
+              "Generate and build a new site": {
+                "n": 5,
+                "median": 8,
+                "min": 8,
+                "max": 9
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "github-2vcpu",
+          "candidate": "groundbox-2vcpu",
+          "cold_ratio": 1.89,
+          "warm_ratio": 1.78
+        }
+      ],
+      "not_ok": []
+    },
+    {
+      "id": "excalidraw",
+      "name": "Excalidraw",
+      "repo": "excalidraw/excalidraw",
+      "commit": "c0a0ca348faa273c768de839a22df113f997c095",
+      "shape": "Web app (yarn): install, format check, lint, typecheck, tests",
+      "runners": {
+        "github-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 2,
+            "min": 2,
+            "max": 5
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 2.5,
+            "min": 2,
+            "max": 6
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 593,
+              "min": 573,
+              "max": 600
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 3,
+                "min": 3,
+                "max": 5
+              },
+              "Setup Node": {
+                "n": 3,
+                "median": 7,
+                "min": 5,
+                "max": 7
+              },
+              "Install": {
+                "n": 3,
+                "median": 75,
+                "min": 73,
+                "max": 83
+              },
+              "Format check": {
+                "n": 3,
+                "median": 4,
+                "min": 4,
+                "max": 4
+              },
+              "Lint": {
+                "n": 3,
+                "median": 38,
+                "min": 37,
+                "max": 40
+              },
+              "Typecheck": {
+                "n": 3,
+                "median": 20,
+                "min": 20,
+                "max": 20
+              },
+              "Tests": {
+                "n": 3,
+                "median": 425,
+                "min": 409,
+                "max": 426
+              },
+              "Post Setup Node": {
+                "n": 3,
+                "median": 15,
+                "min": 15,
+                "max": 16
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 652,
+              "min": 521,
+              "max": 661
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 3
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 3,
+                "min": 2,
+                "max": 7
+              },
+              "Setup Node": {
+                "n": 5,
+                "median": 43,
+                "min": 28,
+                "max": 51
+              },
+              "Install": {
+                "n": 5,
+                "median": 22,
+                "min": 18,
+                "max": 30
+              },
+              "Format check": {
+                "n": 5,
+                "median": 5,
+                "min": 4,
+                "max": 5
+              },
+              "Lint": {
+                "n": 5,
+                "median": 47,
+                "min": 34,
+                "max": 50
+              },
+              "Typecheck": {
+                "n": 5,
+                "median": 25,
+                "min": 18,
+                "max": 27
+              },
+              "Tests": {
+                "n": 5,
+                "median": 493,
+                "min": 389,
+                "max": 522
+              },
+              "Post Setup Node": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-2vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 5,
+            "min": 4,
+            "max": 6
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 5.5,
+            "min": 4,
+            "max": 7
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 357,
+              "min": 353,
+              "max": 372
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Setup Node": {
+                "n": 3,
+                "median": 1,
+                "min": 1,
+                "max": 1
+              },
+              "Install": {
+                "n": 3,
+                "median": 22,
+                "min": 20,
+                "max": 25
+              },
+              "Format check": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 3
+              },
+              "Lint": {
+                "n": 3,
+                "median": 28,
+                "min": 21,
+                "max": 30
+              },
+              "Typecheck": {
+                "n": 3,
+                "median": 13,
+                "min": 12,
+                "max": 16
+              },
+              "Tests": {
+                "n": 3,
+                "median": 288,
+                "min": 274,
+                "max": 289
+              },
+              "Post Setup Node": {
+                "n": 3,
+                "median": 7,
+                "min": 6,
+                "max": 9
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 309,
+              "min": 292,
+              "max": 315
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Setup Node": {
+                "n": 5,
+                "median": 6,
+                "min": 6,
+                "max": 7
+              },
+              "Install": {
+                "n": 5,
+                "median": 4,
+                "min": 4,
+                "max": 6
+              },
+              "Format check": {
+                "n": 5,
+                "median": 2,
+                "min": 2,
+                "max": 3
+              },
+              "Lint": {
+                "n": 5,
+                "median": 19,
+                "min": 19,
+                "max": 21
+              },
+              "Typecheck": {
+                "n": 5,
+                "median": 11,
+                "min": 10,
+                "max": 11
+              },
+              "Tests": {
+                "n": 5,
+                "median": 262,
+                "min": 247,
+                "max": 266
+              },
+              "Post Setup Node": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        },
+        "groundbox-4vcpu": {
+          "queue_s": {
+            "n": 8,
+            "median": 1,
+            "min": 0,
+            "max": 1
+          },
+          "to_first_step_s": {
+            "n": 8,
+            "median": 1,
+            "min": 1,
+            "max": 1
+          },
+          "cold": {
+            "job_s": {
+              "n": 3,
+              "median": 181,
+              "min": 167,
+              "max": 182
+            },
+            "steps": {
+              "Set up job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 3,
+                "median": 2,
+                "min": 2,
+                "max": 2
+              },
+              "Setup Node": {
+                "n": 3,
+                "median": 1,
+                "min": 0,
+                "max": 4
+              },
+              "Install": {
+                "n": 3,
+                "median": 17,
+                "min": 15,
+                "max": 19
+              },
+              "Format check": {
+                "n": 3,
+                "median": 2,
+                "min": 1,
+                "max": 3
+              },
+              "Lint": {
+                "n": 3,
+                "median": 20,
+                "min": 20,
+                "max": 23
+              },
+              "Typecheck": {
+                "n": 3,
+                "median": 10,
+                "min": 8,
+                "max": 10
+              },
+              "Tests": {
+                "n": 3,
+                "median": 117,
+                "min": 112,
+                "max": 120
+              },
+              "Post Setup Node": {
+                "n": 3,
+                "median": 5,
+                "min": 5,
+                "max": 5
+              },
+              "Post Checkout project": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 1
+              },
+              "Complete runner": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 3,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 0
+          },
+          "warm": {
+            "job_s": {
+              "n": 5,
+              "median": 147,
+              "min": 143,
+              "max": 160
+            },
+            "steps": {
+              "Set up job": {
+                "n": 5,
+                "median": 1,
+                "min": 0,
+                "max": 1
+              },
+              "Set up runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Runner info": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Checkout project": {
+                "n": 5,
+                "median": 1,
+                "min": 1,
+                "max": 2
+              },
+              "Setup Node": {
+                "n": 5,
+                "median": 5,
+                "min": 5,
+                "max": 5
+              },
+              "Install": {
+                "n": 5,
+                "median": 4,
+                "min": 3,
+                "max": 5
+              },
+              "Format check": {
+                "n": 5,
+                "median": 2,
+                "min": 1,
+                "max": 2
+              },
+              "Lint": {
+                "n": 5,
+                "median": 19,
+                "min": 17,
+                "max": 19
+              },
+              "Typecheck": {
+                "n": 5,
+                "median": 9,
+                "min": 8,
+                "max": 10
+              },
+              "Tests": {
+                "n": 5,
+                "median": 104,
+                "min": 104,
+                "max": 117
+              },
+              "Post Setup Node": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Post Checkout project": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete runner": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "Complete job": {
+                "n": 5,
+                "median": 0,
+                "min": 0,
+                "max": 0
+              }
+            },
+            "cache_restored_runs": 5
+          }
+        }
+      },
+      "comparisons": [
+        {
+          "baseline": "github-2vcpu",
+          "candidate": "groundbox-2vcpu",
+          "cold_ratio": 1.66,
+          "warm_ratio": 2.11
+        }
+      ],
+      "not_ok": [
+        {
+          "runner": "github-2vcpu",
+          "kind": "warm",
+          "n": 3,
+          "attempt": 1,
+          "status": "failure",
+          "url": "https://github.com/Ground-box/benchmarks/actions/runs/43994995816",
+          "error": null
+        }
+      ]
+    }
+  ]
+}

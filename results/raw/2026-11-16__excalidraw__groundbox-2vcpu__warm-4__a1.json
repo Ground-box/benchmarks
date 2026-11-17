@@ -1,0 +1,253 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "excalidraw",
+  "project_repo": "excalidraw/excalidraw",
+  "project_commit": "c0a0ca348faa273c768de839a22df113f997c095",
+  "runner_id": "groundbox-2vcpu",
+  "runner_label": "groundbox-2vcpu",
+  "provider": "Groundbox",
+  "kind": "warm",
+  "n": 4,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/excalidraw/groundbox-2vcpu/warm-a1",
+  "tag": "2026-11-16/excalidraw/groundbox-2vcpu/warm-4/a1/lmwbq0",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-17T00:10:42.432Z",
+  "status": "ok",
+  "run": {
+    "id": 43985497778,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43985497778",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/excalidraw/groundbox-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-17T00:10:44Z",
+    "run_started_at": "2026-11-17T00:10:44Z",
+    "updated_at": "2026-11-17T00:16:00Z"
+  },
+  "job": {
+    "id": 133712471778,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-17T00:10:45Z",
+    "started_at": "2026-11-17T00:10:50Z",
+    "completed_at": "2026-11-17T00:15:59Z",
+    "runner_name": "gbx-2vcpu-d2ta0qemhu",
+    "runner_group_name": "default",
+    "labels": [
+      "groundbox-2vcpu"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-17T00:10:50Z",
+        "completed_at": "2026-11-17T00:10:51Z"
+      },
+      {
+        "name": "Set up runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-17T00:10:51Z",
+        "completed_at": "2026-11-17T00:10:51Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-17T00:10:51Z",
+        "completed_at": "2026-11-17T00:10:51Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-17T00:10:51Z",
+        "completed_at": "2026-11-17T00:10:52Z"
+      },
+      {
+        "name": "Setup Node",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-17T00:10:52Z",
+        "completed_at": "2026-11-17T00:10:58Z"
+      },
+      {
+        "name": "Install",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-17T00:10:58Z",
+        "completed_at": "2026-11-17T00:11:02Z"
+      },
+      {
+        "name": "Format check",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-17T00:11:02Z",
+        "completed_at": "2026-11-17T00:11:05Z"
+      },
+      {
+        "name": "Lint",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8,
+        "started_at": "2026-11-17T00:11:05Z",
+        "completed_at": "2026-11-17T00:11:24Z"
+      },
+      {
+        "name": "Typecheck",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 9,
+        "started_at": "2026-11-17T00:11:24Z",
+        "completed_at": "2026-11-17T00:11:35Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 10,
+        "started_at": "2026-11-17T00:11:35Z",
+        "completed_at": "2026-11-17T00:15:57Z"
+      },
+      {
+        "name": "Post Setup Node",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 18,
+        "started_at": "2026-11-17T00:15:57Z",
+        "completed_at": "2026-11-17T00:15:57Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 19,
+        "started_at": "2026-11-17T00:15:57Z",
+        "completed_at": "2026-11-17T00:15:57Z"
+      },
+      {
+        "name": "Complete runner",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 20,
+        "started_at": "2026-11-17T00:15:57Z",
+        "completed_at": "2026-11-17T00:15:57Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 21,
+        "started_at": "2026-11-17T00:15:57Z",
+        "completed_at": "2026-11-17T00:15:57Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 5,
+    "to_first_step_s": 5,
+    "job_s": 309,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Set up runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup Node",
+        "conclusion": "success",
+        "seconds": 6
+      },
+      {
+        "name": "Install",
+        "conclusion": "success",
+        "seconds": 4
+      },
+      {
+        "name": "Format check",
+        "conclusion": "success",
+        "seconds": 3
+      },
+      {
+        "name": "Lint",
+        "conclusion": "success",
+        "seconds": 19
+      },
+      {
+        "name": "Typecheck",
+        "conclusion": "success",
+        "seconds": 11
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 262
+      },
+      {
+        "name": "Post Setup Node",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete runner",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC",
+    "kernel": "6.18.63",
+    "mem_gb": 7.8
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: node-cache-Linux-x64-yarn-edcb06713d9e5ac1b38134fb1cb9dd2116ab57206172b8eccbddb2058ab75510",
+      "Cache restored successfully",
+      "Cache restored from key: node-cache-Linux-x64-yarn-edcb06713d9e5ac1b38134fb1cb9dd2116ab57206172b8eccbddb2058ab75510",
+      "Cache hit occurred on the primary key node-cache-Linux-x64-yarn-edcb06713d9e5ac1b38134fb1cb9dd2116ab57206172b8eccbddb2058ab75510, not saving cache."
+    ]
+  }
+}

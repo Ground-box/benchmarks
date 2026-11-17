@@ -1,0 +1,201 @@
+{
+  "schema": 1,
+  "series": "2026-11-16",
+  "project": "ripgrep",
+  "project_repo": "BurntSushi/ripgrep",
+  "project_commit": "178cc027e283fd965cb72d0a7395b219eada170c",
+  "runner_id": "github-2vcpu",
+  "runner_label": "ubuntu-latest",
+  "provider": "GitHub-hosted",
+  "kind": "warm",
+  "n": 4,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-16/ripgrep/github-2vcpu/warm-a1",
+  "tag": "2026-11-16/ripgrep/github-2vcpu/warm-4/a1/sckr5y",
+  "harness_commit": "ae93ed749e7145533eda2d89e67ccea84c230218",
+  "dispatched_at": "2026-11-17T01:49:59.328Z",
+  "status": "ok",
+  "run": {
+    "id": 43998525434,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/43998525434",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-16/ripgrep/github-2vcpu/warm-a1",
+    "head_sha": "ae93ed749e7145533eda2d89e67ccea84c230218",
+    "created_at": "2026-11-17T01:50:01Z",
+    "run_started_at": "2026-11-17T01:50:01Z",
+    "updated_at": "2026-11-17T01:51:10Z"
+  },
+  "job": {
+    "id": 133756501060,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-17T01:50:02Z",
+    "started_at": "2026-11-17T01:50:03Z",
+    "completed_at": "2026-11-17T01:51:09Z",
+    "runner_name": "GitHub Actions 1000000313",
+    "runner_group_name": "GitHub Actions",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-17T01:50:04Z",
+        "completed_at": "2026-11-17T01:50:05Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-17T01:50:05Z",
+        "completed_at": "2026-11-17T01:50:05Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-17T01:50:05Z",
+        "completed_at": "2026-11-17T01:50:06Z"
+      },
+      {
+        "name": "Setup Rust",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-17T01:50:06Z",
+        "completed_at": "2026-11-17T01:50:17Z"
+      },
+      {
+        "name": "Cargo cache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-17T01:50:17Z",
+        "completed_at": "2026-11-17T01:50:20Z"
+      },
+      {
+        "name": "Build (release)",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-17T01:50:20Z",
+        "completed_at": "2026-11-17T01:50:43Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-17T01:50:43Z",
+        "completed_at": "2026-11-17T01:51:07Z"
+      },
+      {
+        "name": "Post Cargo cache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-17T01:51:07Z",
+        "completed_at": "2026-11-17T01:51:08Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14,
+        "started_at": "2026-11-17T01:51:08Z",
+        "completed_at": "2026-11-17T01:51:08Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-17T01:51:08Z",
+        "completed_at": "2026-11-17T01:51:08Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 1,
+    "to_first_step_s": 2,
+    "job_s": 66,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Setup Rust",
+        "conclusion": "success",
+        "seconds": 11
+      },
+      {
+        "name": "Cargo cache",
+        "conclusion": "success",
+        "seconds": 3
+      },
+      {
+        "name": "Build (release)",
+        "conclusion": "success",
+        "seconds": 23
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 24
+      },
+      {
+        "name": "Post Cargo cache",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "kernel": "7.0.0-1019-azure",
+    "mem_gb": 7.7
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for: v0-rust-bench-Linux-x64-8272a5e9-f1630c24",
+      "Cache restored successfully",
+      "Restored from cache key \"v0-rust-bench-Linux-x64-8272a5e9-f1630c24\" full match: true.",
+      "Cache up-to-date."
+    ]
+  }
+}
