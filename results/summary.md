@@ -28,6 +28,8 @@ Ratio is the baseline median divided by the candidate median. Above 1.00 the can
 | Jekyll | 2m 14s (n=3) | 1m 11s (n=3) | 1.89 | 1m 29s (n=5) | 50s (n=5) | 1.78 |
 | Excalidraw | 9m 53s (n=3) | 5m 57s (n=3) | 1.66 | 10m 52s (n=5) | 5m 09s (n=5) | 2.11 |
 
+{fmt}'s warm row above is from before a cache fix (see the README's limits). Measured again on 2026-11-17 after the fix: warm 7 s on Groundbox against 29 s on GitHub (n=5 each), cold 1m 07s against 3m 18s (n=3 each). See `summary-2026-11-17-fmt.md`.
+
 ## Each project
 
 ### Vue core
