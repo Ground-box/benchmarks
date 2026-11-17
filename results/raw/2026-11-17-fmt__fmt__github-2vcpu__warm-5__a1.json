@@ -1,0 +1,200 @@
+{
+  "schema": 1,
+  "series": "2026-11-17-fmt",
+  "project": "fmt",
+  "project_repo": "fmtlib/fmt",
+  "project_commit": "14ac0d5a9d40aef14f50954069c1e10971abb0b2",
+  "runner_id": "github-2vcpu",
+  "runner_label": "ubuntu-latest",
+  "provider": "GitHub-hosted",
+  "kind": "warm",
+  "n": 5,
+  "attempt": 1,
+  "primes_warm_cache": false,
+  "branch": "bench/2026-11-17-fmt/fmt/github-2vcpu/warm-a1",
+  "tag": "2026-11-17-fmt/fmt/github-2vcpu/warm-5/a1/uizuel",
+  "harness_commit": "99ccd2b782578c925ea793290a61356bb0b1a08e",
+  "dispatched_at": "2026-11-17T04:42:03.360Z",
+  "status": "ok",
+  "run": {
+    "id": 44018978906,
+    "html_url": "https://github.com/Ground-box/benchmarks/actions/runs/44018978906",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "head_branch": "bench/2026-11-17-fmt/fmt/github-2vcpu/warm-a1",
+    "head_sha": "99ccd2b782578c925ea793290a61356bb0b1a08e",
+    "created_at": "2026-11-17T04:42:05Z",
+    "run_started_at": "2026-11-17T04:42:05Z",
+    "updated_at": "2026-11-17T04:42:41Z"
+  },
+  "job": {
+    "id": 133823659420,
+    "name": "bench",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-17T04:42:06Z",
+    "started_at": "2026-11-17T04:42:08Z",
+    "completed_at": "2026-11-17T04:42:40Z",
+    "runner_name": "GitHub Actions 1000000350",
+    "runner_group_name": "GitHub Actions",
+    "labels": [
+      "ubuntu-latest"
+    ],
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-11-17T04:42:09Z",
+        "completed_at": "2026-11-17T04:42:10Z"
+      },
+      {
+        "name": "Runner info",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-11-17T04:42:10Z",
+        "completed_at": "2026-11-17T04:42:10Z"
+      },
+      {
+        "name": "Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-11-17T04:42:10Z",
+        "completed_at": "2026-11-17T04:42:11Z"
+      },
+      {
+        "name": "ccache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-11-17T04:42:11Z",
+        "completed_at": "2026-11-17T04:42:24Z"
+      },
+      {
+        "name": "Configure",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-11-17T04:42:24Z",
+        "completed_at": "2026-11-17T04:42:27Z"
+      },
+      {
+        "name": "Build",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-11-17T04:42:27Z",
+        "completed_at": "2026-11-17T04:42:36Z"
+      },
+      {
+        "name": "Tests",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-11-17T04:42:36Z",
+        "completed_at": "2026-11-17T04:42:36Z"
+      },
+      {
+        "name": "Post ccache",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 13,
+        "started_at": "2026-11-17T04:42:36Z",
+        "completed_at": "2026-11-17T04:42:37Z"
+      },
+      {
+        "name": "Post Checkout project",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 14,
+        "started_at": "2026-11-17T04:42:37Z",
+        "completed_at": "2026-11-17T04:42:38Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 15,
+        "started_at": "2026-11-17T04:42:38Z",
+        "completed_at": "2026-11-17T04:42:38Z"
+      }
+    ]
+  },
+  "derived": {
+    "queue_s": 2,
+    "to_first_step_s": 3,
+    "job_s": 32,
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Runner info",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "ccache",
+        "conclusion": "success",
+        "seconds": 13
+      },
+      {
+        "name": "Configure",
+        "conclusion": "success",
+        "seconds": 3
+      },
+      {
+        "name": "Build",
+        "conclusion": "success",
+        "seconds": 9
+      },
+      {
+        "name": "Tests",
+        "conclusion": "success",
+        "seconds": 0
+      },
+      {
+        "name": "Post ccache",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Post Checkout project",
+        "conclusion": "success",
+        "seconds": 1
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "seconds": 0
+      }
+    ]
+  },
+  "machine": {
+    "nproc": 2,
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "kernel": "7.0.0-1019-azure",
+    "mem_gb": 7.7
+  },
+  "cache": {
+    "restored": true,
+    "docker_cached_layers": 0,
+    "lines": [
+      "Cache hit for restore-key: ccache-2026-11-17T04:41:52.113Z",
+      "Cache restored successfully",
+      "Restored from cache key \"ccache-2026-11-17T04:41:52.113Z\"."
+    ]
+  }
+}
